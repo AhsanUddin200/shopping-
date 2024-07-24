@@ -4,6 +4,6 @@
 
 @layer components {
   .custom-class{
-  @apply bg-gray-200 rounded-md p-[6px] text-[14px] cursor:  hover:bg-accent hover:text-white;
+  @apply bg-gray-200 rounded-md p-[6px] text-[14px] cursor-pointer  hover:bg-accent hover:text-white;
 }
 }
