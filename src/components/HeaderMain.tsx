@@ -15,8 +15,8 @@ const HeaderMain = () => {
               <Image
                 src={Logo}
                 alt="Description of the image"
-                width={70}
-                height={100}
+             
+                className="px-8 w-[150px]"
               />
             </div>
 
