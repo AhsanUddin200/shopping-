@@ -5,7 +5,7 @@ import Slide from './Slide';
 
 const Banner: React.FC = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
