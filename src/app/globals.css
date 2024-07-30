@@ -12,13 +12,13 @@
   }
 
   .navbar__link:hover {
-    color: rgb(14, 211, 208);
+    color: rgb(112, 112, 112);
   }
 
   .navbar__link::after {
     content: '';
     position: absolute;
-    background-color: rgba(164, 1, 1, 0.759);
+    background-color: rgba(162, 154, 7, 0.91);
     height: 3px;
     width: 100%;
     bottom: -7px;

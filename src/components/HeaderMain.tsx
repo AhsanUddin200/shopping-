@@ -5,6 +5,8 @@ import { TbShoppingCartSearch } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
 import { FaHeartCirclePlus } from "react-icons/fa6";
 import { HiOutlineShoppingBag } from "react-icons/hi";
+import kapray1 from '../../public/kapray1.png'
+
 const HeaderMain = () => {
   return (
     <>
@@ -13,7 +15,7 @@ const HeaderMain = () => {
           <div className="container sm:flex justify-between items-center">
             <div className="flex justify-center sm:justify-start font-bold text-4xl text-center pb-4 sm:pb-0 text-blackish">
               <Image
-                src={Logo}
+                src={kapray1}
                 alt="Description of the image"
              
                 className="px-8 w-[150px]"
