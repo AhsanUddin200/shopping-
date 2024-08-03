@@ -81,12 +81,13 @@ const ProductCard: React.FC<PropsType> = ({
 }) => {
   return (
     <div className="text-gray-600 text-center text-xl ">
-      <div className="font-bold text-2xl ">{title}</div>
+      <div className="font-bold text-2xl mb-3">{title}</div>
 
-      <div className="px-4 border border-gray-400 rounded-lg max-w-[800px]">
+      <div className="px-4 border border-gray-400 rounded-lg max-w-[800px]  ">
+      {/* */}
         <div>
           <Image
-            className="w-[500px] h-[300px] hover:blur-sm"
+            className="w-[500px] h-[300px] hover:blur-sm rounded-lg mt-2"
             src={img}
             width={200}
             height={300}
@@ -98,8 +99,8 @@ const ProductCard: React.FC<PropsType> = ({
         </div>
         <div className="py-4 space-y-2 px-12">
           <p className="text-gray-500">{desc}</p>
-         <div>{generateRating(rating)}</div>
-         <div className="font-semibold flex gap-4">
+         <div className="">{generateRating(rating)}</div>
+         <div className="font-semibold flex gap-4 ">
           ${price}
           <del className="text-gray-00 font-sm">${parseInt(price) + 5}.00</del>
          </div>
