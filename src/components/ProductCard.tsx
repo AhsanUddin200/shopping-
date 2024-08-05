@@ -98,7 +98,7 @@ const ProductCard: React.FC<PropsType> = ({
           </button>
         </div>
         <div className="py-4 space-y-2 px-12">
-          <p className="text-gray-500">{desc}</p>
+          <p className="text-gray-500 text-sm font-mono">{desc}</p>
          <div className="">{generateRating(rating)}</div>
          <div className="font-semibold flex gap-4 ">
           ${price}

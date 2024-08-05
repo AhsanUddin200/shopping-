@@ -36,41 +36,40 @@ const Products = () => {
       gender: "men",
     },
     {
-      img: "/photo6.jpg",
+      img: "/woman T-Shirt.jpg",
       title: "Cloths and Kapray",
-      desc: "",
+      desc: "A casual, short-sleeved.",
       rating: 5,
       price: "$9.90",
       gender: "women",
     },
     // Add more women products here
     {
-      img: "/women-dress.jpg",
+      img: "/woman.jpg",
       title: "Women Dress",
-      desc: "",
+      desc: "Long (kameez) & pants (shalwar).",
       rating: 4,
       price: "$12.90",
       gender: "women",
     },
     {
-      img: "/women-skirt.jpg",
-      title: "Women Skirt",
-      desc: "",
+      img: "/saree.jpg",
+      title: "Saree",
+      desc: "A long piece of fabric  draped elegantly",
       rating: 4,
       price: "$8.90",
       gender: "women",
     },
     {
-      img: "/women-jacket.jpg",
+      img: "/burqa.webp",
       title: "Women Jacket",
-      desc: "",
+      desc: "Traditional garment covers head to toe",
       rating: 5,
       price: "$15.90",
       gender: "women",
     },
   ];
 
-  // Separate products by gender
   const menProducts = itemsdata.filter(item => item.gender === "men");
   const womenProducts = itemsdata.filter(item => item.gender === "women");
 
