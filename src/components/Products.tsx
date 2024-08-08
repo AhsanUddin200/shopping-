@@ -68,10 +68,21 @@ const Products = () => {
       price: "$15.90",
       gender: "women",
     },
+
+    //For Kids
+    {
+      img: "/burqa.webp",
+      title: "Women Jacket",
+      desc: "Traditional garment covers head to toe",
+      rating: 5,
+      price: "$15.90",
+      gender: "kids",
+    },
   ];
 
   const menProducts = itemsdata.filter(item => item.gender === "men");
   const womenProducts = itemsdata.filter(item => item.gender === "women");
+  const kidsProducts = itemsdata.filter(item => item.gender === "Kids")
 
   return (
     <div className="container pt-16">
@@ -105,6 +116,21 @@ const Products = () => {
             desc={item.desc}
             rating={item.rating}
             price={item.price}
+          />
+        ))}
+      </div>
+      <div className="text-center text-sm mt-10">
+        FOR KIDS
+      </div>
+      <div className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
+        {kidsProducts.map((item, index) => (
+          <ProductCard
+          key={index}
+          img={item.img}
+          title={item.title}
+          desc={item.desc}
+          rating={item.rating}
+          price={item.price} 
           />
         ))}
       </div>
