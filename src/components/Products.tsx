@@ -35,18 +35,19 @@ const Products = () => {
       price: "$9.90",
       gender: "men",
     },
+    // Add more women products here
     {
       img: "/woman T-Shirt.jpg",
-      title: "Cloths and Kapray",
+      title: "Woman T-Shirt",
       desc: "A casual, short-sleeved.",
       rating: 5,
       price: "$9.90",
       gender: "women",
     },
-    // Add more women products here
+    
     {
       img: "/woman.jpg",
-      title: "Women Dress",
+      title: "Shalwar & kameez",
       desc: "Long (kameez) & pants (shalwar).",
       rating: 4,
       price: "$12.90",
@@ -62,7 +63,7 @@ const Products = () => {
     },
     {
       img: "/burqa.webp",
-      title: "Women Jacket",
+      title: "Burqa",
       desc: "Traditional garment covers head to toe",
       rating: 5,
       price: "$15.90",
@@ -72,7 +73,7 @@ const Products = () => {
     //For Kids
     {
       img: "/burqa.webp",
-      title: "Women Jacket",
+      title: "Burqa",
       desc: "Traditional garment covers head to toe",
       rating: 5,
       price: "$15.90",
