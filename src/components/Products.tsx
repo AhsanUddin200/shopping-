@@ -32,7 +32,7 @@ const Products = () => {
       title: "Pants",
       desc: "",
       rating: 2,
-      price: "$9.90",
+      price: "9.90",
       gender: "men",
     },
     // Add more women products here
@@ -41,7 +41,7 @@ const Products = () => {
       title: "Woman T-Shirt",
       desc: "A casual, short-sleeved.",
       rating: 5,
-      price: "$9.90",
+      price: "9.90",
       gender: "women",
     },
     
@@ -50,40 +50,68 @@ const Products = () => {
       title: "Shalwar & kameez",
       desc: "Long (kameez) & pants (shalwar).",
       rating: 4,
-      price: "$12.90",
+      price: "12.90",
       gender: "women",
     },
     {
       img: "/saree.jpg",
       title: "Saree",
-      desc: "A long piece of fabric  draped elegantly",
+      desc: "A long piece of fabric  draped elegantly.",
       rating: 4,
-      price: "$8.90",
+      price: "8.90",
       gender: "women",
     },
     {
       img: "/burqa.webp",
       title: "Burqa",
-      desc: "Traditional garment covers head to toe",
+      desc: "Traditional garment covers head to toe.",
       rating: 5,
-      price: "$15.90",
+      price: "15.90",
       gender: "women",
     },
 
     //For Kids
     {
-      img: "/burqa.webp",
-      title: "Burqa",
-      desc: "Traditional garment covers head to toe",
+      img: "/kids shirt.webp",
+      title: "Shirts",
+      desc: "Comfortable stylish shirts for kids.",
+      rating: 3,
+      price: "11.90",
+      gender: "kids",
+    },
+
+    {
+      img: "/k t-shirt1.jpg",
+      title: "T-Shirts",
+      desc: "T-shirts comfort and all-day wear.",
+      rating: 4,
+      price: "9.26",
+      gender: "kids",
+    },
+
+    {
+      img: "/kids.jpg",
+      title: "Sleepwear",
+      desc: " kids comfortable  cozy garment  for sleepwear.",
       rating: 5,
-      price: "$15.90",
+      price: "17.90",
+      gender: "kids",
+    },
+
+    {
+      img: "/kids pant.webp",
+      title: "Pants Jeans",
+      desc: "jeans durable made from denim fabric. ",
+      rating: 4,
+      price: "19.90",
       gender: "kids",
     },
   ];
 
   const menProducts = itemsdata.filter(item => item.gender === "men");
   const womenProducts = itemsdata.filter(item => item.gender === "women");
-  const kidsProducts = itemsdata.filter(item => item.gender === "Kids")
+  const kidsProducts  = itemsdata.filter(item => item.gender === "kids");
+
 
   return (
     <div className="container pt-16">
