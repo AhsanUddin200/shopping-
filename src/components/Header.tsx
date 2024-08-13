@@ -3,6 +3,7 @@ import { AiFillFacebook } from "react-icons/ai";
 import { SiDiscord } from "react-icons/si";
 import { CgInstagram } from "react-icons/cg";
 import { ImWhatsapp } from "react-icons/im";
+import Theme from "./Theme";
 const Header = () => {
   return (
     <>
@@ -63,6 +64,10 @@ const Header = () => {
 
                 <div className="header__icon_wrapper">
                   <ImWhatsapp />
+                </div>
+
+                <div>
+                  <Theme />
                 </div>
               </div>
             </div>
