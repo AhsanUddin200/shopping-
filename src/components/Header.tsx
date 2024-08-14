@@ -7,8 +7,8 @@ import Theme from "./Theme";
 const Header = () => {
   return (
     <>
-      <div>
-        <div className="border-b border-gray-400 hidden sm:block">
+      <div className="">
+        <div className="dark:bg-dark border-b border-gray-400 hidden sm:block">
           <div className="container py-4">
             <div className="flex justify-between items-center">
               <div className="flex gap-5">
