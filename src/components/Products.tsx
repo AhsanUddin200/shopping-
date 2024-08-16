@@ -14,7 +14,7 @@ const Products = () => {
     {
       img: "/Tshirts.jpeg",
       title: "T-Shirts",
-      desc: "Comfortable,casual shirt  short sleeves.",
+      desc: "Comfortable, casual shirt short sleeves.",
       rating: 4,
       price: "24.80",
       gender: "men",
@@ -30,7 +30,7 @@ const Products = () => {
     {
       img: "/pant.jpeg",
       title: "Pants",
-      desc: "Comfortable pants for everyday wear .",
+      desc: "Comfortable pants for everyday wear.",
       rating: 2,
       price: "19.30",
       gender: "men",
@@ -44,7 +44,6 @@ const Products = () => {
       price: "9.90",
       gender: "women",
     },
-    
     {
       img: "/woman.jpg",
       title: "Shalwar & kameez",
@@ -56,7 +55,7 @@ const Products = () => {
     {
       img: "/saree.jpg",
       title: "Saree",
-      desc: "A long piece of fabric  draped elegantly.",
+      desc: "A long piece of fabric draped elegantly.",
       rating: 4,
       price: "8.90",
       gender: "women",
@@ -69,8 +68,7 @@ const Products = () => {
       price: "15.90",
       gender: "women",
     },
-
-    //For Kids
+    // For Kids
     {
       img: "/kids shirt.webp",
       title: "Shirts",
@@ -79,7 +77,6 @@ const Products = () => {
       price: "11.90",
       gender: "kids",
     },
-
     {
       img: "/k t-shirt1.jpg",
       title: "T-Shirts",
@@ -88,39 +85,71 @@ const Products = () => {
       price: "9.26",
       gender: "kids",
     },
-
     {
       img: "/kids.jpg",
       title: "Sleepwear",
-      desc: " kids comfortable  cozy garment  for sleepwear.",
+      desc: "Kids comfortable cozy garment for sleepwear.",
       rating: 5,
       price: "17.90",
       gender: "kids",
     },
-
     {
       img: "/kids pant.webp",
       title: "Pants Jeans",
-      desc: "jeans durable made from denim fabric. ",
+      desc: "Jeans durable made from denim fabric.",
       rating: 4,
       price: "19.90",
       gender: "kids",
     },
+    // For Girls
+    {
+      img: "/girl1.webp",
+      title: "Pants Jeans",
+      desc: "Jeans durable made from denim fabric.",
+      rating: 4,
+      price: "19.90",
+      gender: "girls",
+    },
+
+    {
+      img: "/girl2.webp",
+      title: "Pants Jeans",
+      desc: "Jeans durable made from denim fabric.",
+      rating: 4,
+      price: "19.90",
+      gender: "girls",
+    },
+
+    {
+      img: "/girl3.webp",
+      title: "Pants Jeans",
+      desc: "Jeans durable made from denim fabric.",
+      rating: 4,
+      price: "19.90",
+      gender: "girls",
+    },
+
+    {
+      img: "/girls4.webp",
+      title: "Pants Jeans",
+      desc: "Jeans durable made from denim fabric.",
+      rating: 4,
+      price: "19.90",
+      gender: "girls",
+    },
   ];
 
-  const menProducts = itemsdata.filter(item => item.gender === "men");
-  const womenProducts = itemsdata.filter(item => item.gender === "women");
-  const kidsProducts  = itemsdata.filter(item => item.gender === "kids");
-
+  const menProducts = itemsdata.filter((item) => item.gender === "men");
+  const womenProducts = itemsdata.filter((item) => item.gender === "women");
+  const kidsProducts = itemsdata.filter((item) => item.gender === "kids");
+  const girlsProducts = itemsdata.filter((item) => item.gender === "girls");
 
   return (
     <div className="container pt-16">
       <div className="font-serif text-3xl pb-4 text-gray-400 text-center">
         Our Products
       </div>
-      <div className="text-center text-sm">
-        FOR MEN
-      </div>
+      <div className="text-center text-sm">FOR MEN</div>
       <div className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
         {menProducts.map((item, index) => (
           <ProductCard
@@ -133,9 +162,7 @@ const Products = () => {
           />
         ))}
       </div>
-      <div className="text-center text-sm mt-10">
-        FOR WOMEN
-      </div>
+      <div className="text-center text-sm mt-10">FOR WOMEN</div>
       <div className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
         {womenProducts.map((item, index) => (
           <ProductCard
@@ -148,18 +175,29 @@ const Products = () => {
           />
         ))}
       </div>
-      <div className="text-center text-sm mt-10">
-        FOR KIDS
-      </div>
+      <div className="text-center text-sm mt-10">FOR BOYS</div>
       <div className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
         {kidsProducts.map((item, index) => (
           <ProductCard
-          key={index}
-          img={item.img}
-          title={item.title}
-          desc={item.desc}
-          rating={item.rating}
-          price={item.price} 
+            key={index}
+            img={item.img}
+            title={item.title}
+            desc={item.desc}
+            rating={item.rating}
+            price={item.price}
+          />
+        ))}
+      </div>
+      <div className="text-center text-sm mt-10">FOR GIRLS</div>
+      <div className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
+        {girlsProducts.map((item, index) => (
+          <ProductCard
+            key={index}
+            img={item.img}
+            title={item.title}
+            desc={item.desc}
+            rating={item.rating}
+            price={item.price}
           />
         ))}
       </div>
