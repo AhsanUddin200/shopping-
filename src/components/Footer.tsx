@@ -1,8 +1,10 @@
-import React from "react";
+"use client";
+import React, { Component } from "react";
 import { AiFillFacebook } from "react-icons/ai";
 import { SiDiscord } from "react-icons/si";
 import { CgInstagram } from "react-icons/cg";
 import { ImWhatsapp } from "react-icons/im";
+import { Typewriter } from "react-simple-typewriter";
 
 const Footer = () => {
   return (
@@ -14,7 +16,16 @@ const Footer = () => {
               Company
             </h1>
             <div className="font-mono space-y-4  ">
-              <h2 className="font-thin text-lg">Mission Statment</h2>
+              {/* <h2 className="font-thin text-lg">Mission Statment</h2> */}
+
+              <div className="font-thin text-lg">
+                <Typewriter
+                  words={["Mission Statment", "Mission Statment"]}
+                  loop={true}
+                  cursor
+                  cursorStyle="..."
+                />{" "}
+              </div>
               <p>
                 کپڑے جی mission is to blend tradition and modernity in
                 high-quality garments that showcase Pakistan's rich cultural
@@ -70,22 +81,34 @@ const Footer = () => {
 
           <div className="flex flex-col sm:flex-row bg-black text-white">
             <div className="mt-5 ">
-              <h1 className="font-bold text-xl inline-block border-b-2 border-yellow-600"   >Reach Us</h1>
+              <h1 className="font-bold text-xl inline-block border-b-2 border-yellow-600">
+                Reach Us
+              </h1>
               <div className="flex gap-5 mt-4 ">
-                <  ImWhatsapp className="scale-125"/>
-                <CgInstagram className="scale-125"/>
+                <ImWhatsapp className="scale-125" />
+                <CgInstagram className="scale-125" />
                 <SiDiscord className="scale-125" />
-                <AiFillFacebook className="scale-125"/>
+                <AiFillFacebook className="scale-125" />
               </div>
-              <div className="mt-5 font-semibold">
-                Email
-              </div>
-              <p className="bg-white text-black px-2 rounded-lg mt-2"> Kaprayji2024@gmail.com</p>
+              <div className="mt-5 font-semibold">Email</div>
+              <p className="bg-white text-black px-4 rounded-lg mt-3 text-sm font-serif">
+                {" "}
+                Kaprayji2024@gmail.com
+              </p>
 
-              <div className="mt-4 font-semibold">
-                Site Address
-              </div>
-              <p className="  px-2 rounded-lg mt-2 text-sm font-mono">  Survey Nos. 36 and 112  Deagu, South Korea</p>
+              <div className="mt-4 font-semibold">Site Address</div>
+              {/* <p className="  px-2 rounded-lg mt-2 text-sm font-mono">
+                {" "}
+                Survey Nos. 36 and 112 Deagu, South Korea
+              </p> */}
+                <div className=" px-2 rounded-lg mt-2 text-sm font-mono" >    
+                  <Typewriter
+                  words={[" Survey Nos. 36 and 112 Deagu, South Korea", ""]}
+                  loop={true}
+                  cursor
+                  cursorStyle=".."
+                /></div>
+              
             </div>
           </div>
         </div>

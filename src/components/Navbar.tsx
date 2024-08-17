@@ -1,10 +1,13 @@
+"use client"
 import Link from 'next/link'
 import React from 'react'
+import { useState,useEffect } from 'react';
 
 const Navbar = () => {
+  
   return (
   <>
-  <div>
+  <div >
 
     <div className='hidden lg:block'>
         <div className='container'>
