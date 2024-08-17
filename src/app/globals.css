@@ -32,4 +32,5 @@
   .navbar__link:hover::after {
     transform: scale(1);
   }
+  
 }

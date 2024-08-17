@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import Logo from "../../public/mylogo.png";
@@ -6,12 +7,24 @@ import { BiUser } from "react-icons/bi";
 import { FaHeartCirclePlus } from "react-icons/fa6";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import kapray1 from '../../public/kapray1.png'
+import { useState,useEffect } from "react";
 
 const HeaderMain = () => {
+const placeholder = ['Men','Woman','Boys','Girls']
+const [placeholderIndex ,setPlaceholderIndex] = useState(0)
+
+useEffect (()=> {
+  const interval = setInterval(()=> {
+    setPlaceholderIndex((prevIndex) => (prevIndex + 1) % placeholder.length)
+  },4000)
+
+  return () => clearInterval(interval)
+},[])
+
   return (
     <>
       <div>
-        <div className="border-b border-gray-300  ">
+        <div className="border-b border-gray-300 px-12 ">
           <div className="container sm:flex justify-between items-center">
             <div className="flex justify-center sm:justify-start font-bold text-4xl text-center pb-4 sm:pb-0 text-blackish">
               <Image
@@ -22,17 +35,17 @@ const HeaderMain = () => {
               />
             </div>
 
-            <div className="w-full sm:w-[330px] md:w-[70%] relative">
-              <input
-                className="border-gray-500 border p-2 px-5 rounded-xl w-full"
-                type="text"
-                placeholder="Enter Name Of The Product"
-              />
-              <TbShoppingCartSearch
-                className="absolute right-0 top-0 mr-6 mt-2 text-gray-900  "
-                size={20}
-              />
-            </div>
+            <div className="w-full sm:w-[330px] md:w-[50%] relative">
+      <input
+        className="border-gray-500 border p-2 px-5 rounded-xl w-full"
+        type="text"
+        placeholder={` ${placeholder[placeholderIndex]}`}
+      />
+      <TbShoppingCartSearch
+        className="absolute right-0 top-0 mr-6 mt-2 text-gray-900"
+        size={20}
+      />
+    </div>
             <div  className="space-x-4 flex  pr-5">
             <div className="hidden lg:flex text-gray-700 gap-0 text-[25px] hover:scale-110">
                 <BiUser />

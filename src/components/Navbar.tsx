@@ -16,7 +16,30 @@ const Navbar = () => {
 
                 <Link className="navbar__link relative underline:transition-pink-800" href="#">HOME</Link>
         
-                <Link className="navbar__link relative underline:transition-pink-800" href="#">MEN'S</Link>
+                <div className="relative group">
+                <Link className="navbar__link relative underline:transition-pink-800" href="#">
+                  MEN'S
+                </Link>
+                <div className="absolute left-0 z-10 hidden group-hover:block mt-2 font-normal bg-white divide-y divide-gray-100 rounded-xl shadow w-32 dark:bg-gray-200 dark:divide-gray-900">
+                  <ul className="py-2 text-sm text-black dark:text-gray-900" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        Dashboard
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        Settings
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        Earnings
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
                 <Link className="navbar__link relative underline:transition-pink-800" href="#">WOMEN'S</Link>
                 
