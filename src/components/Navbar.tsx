@@ -20,28 +20,65 @@ const Navbar = () => {
                 <Link className="navbar__link relative underline:transition-pink-800" href="#">
                   MEN'S
                 </Link>
-                <div className="absolute left-0 z-10 hidden group-hover:block mt-2 font-normal bg-white divide-y divide-gray-100 rounded-xl shadow w-32 dark:bg-gray-200 dark:divide-gray-900">
+                <div className="absolute left-0 z-10 hidden group-hover:block mt-1 font-normal bg-white divide-y divide-gray-100 rounded-xl shadow w-32 dark:bg-gray-200 dark:divide-gray-900">
                   <ul className="py-2 text-sm text-black dark:text-gray-900" aria-labelledby="dropdownLargeButton">
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                        Dashboard
+                      <a href="#" className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        Shalwar Qameez
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                        Settings
+                      <a href="#" className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        Pants
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                        Earnings
+                      <a href="#" className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        Shirt
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#" className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        T-Shirt
                       </a>
                     </li>
                   </ul>
                 </div>
               </div>
 
-                <Link className="navbar__link relative underline:transition-pink-800" href="#">WOMEN'S</Link>
+              <div className="relative group">
+                <Link className="navbar__link relative underline:transition-pink-800" href="#">
+                  WOMEN'S
+                </Link>
+                <div className="absolute left-0 z-10 hidden group-hover:block mt-1 font-normal bg-white divide-y divide-gray-100 rounded-xl shadow w-32 dark:bg-gray-200 dark:divide-gray-900">
+                  <ul className="py-2 text-sm text-black dark:text-gray-900" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#" className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        Kurta Paijama
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        Saree
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        Burqa
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#" className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        T-Shirt
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+                
                 
                 <Link className="navbar__link relative underline:transition-pink-800" href="#">INFANT</Link>
 
