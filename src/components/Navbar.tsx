@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { useState,useEffect } from 'react';
+import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   
@@ -14,7 +15,17 @@ const Navbar = () => {
 
             <div className='flex w-fit gap-12 mx-auto font-semibold py-5 text-blackish'>
 
-                <Link className="navbar__link relative underline:transition-pink-800" href="#">HOME</Link>
+            <ScrollLink 
+              activeClass="active" 
+              to="Banner" 
+              spy={true} 
+              offset={-50} 
+              smooth={true} 
+              duration={500} 
+              className="navbar__link relative underline:transition-pink-800 cursor-pointer"
+            >
+             HOME
+            </ScrollLink>
         
                 <div className="relative group">
                 <Link className="navbar__link relative underline:transition-pink-800" href="#">
@@ -80,15 +91,26 @@ const Navbar = () => {
 
                 
                 
-                <Link className="navbar__link relative underline:transition-pink-800" href="#">INFANT</Link>
+                
 
-                <Link className="navbar__link relative underline:transition-pink-800" href="#">BABY</Link>
+                <Link className="navbar__link relative underline:transition-pink-800" href="#">KIDS</Link>
 
-                <Link className="navbar__link relative underline:transition-pink-800" href="#">BABA</Link>
+                <Link className="navbar__link relative underline:transition-pink-800" href="#">GIRLS</Link>
 
-                <Link className="navbar__link relative underline:transition-pink-800" href="#">CATEGORIES</Link>
-
+                <ScrollLink 
+              activeClass="active" 
+              to="Products" 
+              spy={true} 
+              offset={-50} 
+              smooth={true} 
+              duration={500} 
+              className="navbar__link relative underline:transition-pink-800"
+            >
+              CATEGORIES
+            </ScrollLink>
                 <Link className="navbar__link relative underline:transition-pink-800" href="#">SELL OFFER</Link>
+
+                <Link className="navbar__link relative underline:transition-pink-800" href="#">TESTIMONAILS</Link>
 
             </div>
 

@@ -132,7 +132,7 @@ const Products = () => {
     {
       img: "/girls4.webp",
       title: "Maksi",
-      desc: " Maksi  flowing dress elegance and comfort..",
+      desc: " Maksi  flowing dress elegance and comfort.",
       rating: 2,
       price: "45.10",
       gender: "girls",
@@ -145,7 +145,7 @@ const Products = () => {
   const girlsProducts = itemsdata.filter((item) => item.gender === "girls");
 
   return (
-    <div className="container pt-16">
+    <div id="Products" className="container pt-16">
       <div className="font-serif text-3xl pb-4 text-gray-400 text-center">
         Our Products
       </div>

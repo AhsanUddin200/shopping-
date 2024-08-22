@@ -47,7 +47,7 @@ const Banner: React.FC = () => {
   ];
 
   return (
-    <div className='container pt-6 lg:pt-0'>
+    <div id="Banner"  className='container pt-6 lg:pt-0'>
       <Slider {...settings}>
         {Data.map((item) => (
           <Slide

@@ -31,7 +31,7 @@ useEffect (()=> {
                 src={logo1}
                 alt="Description of the image"
              
-                className="px-8 w-[150px]"
+                className="px-8 w-[140px] hover:scale-150"
               />
             </div>
 
