@@ -51,19 +51,31 @@ const Header = () => {
                 <b>GAALA SALE</b> THIS WEEKEND ORDER OVER NOW!!
               </div>
               <div className="hidden  lg:flex gap-5">
+
                 <div className="header__icon_wrapper">
-                  <AiFillFacebook />
+                  <a href="https://www.facebook.com/ahsan.nasir.509/" target="_blank" rel="noopener noreferrer">
+                  <AiFillFacebook  className="hover:scale-125" />
+                  </a>
                 </div>
                 <div className="header__icon_wrapper">
-                  <SiDiscord />
+                  <a href="https://www.instagram.com/uddin5958/" target="_blank" rel="noopener noreferrer">
+                  
+                  <CgInstagram   className="hover:scale-125" />
+                  </a>
                 </div>
 
                 <div className="header__icon_wrapper">
-                  <CgInstagram />
+                  < SiDiscord  className="hover:scale-125" />
                 </div>
 
                 <div className="header__icon_wrapper">
-                  <ImWhatsapp />
+                  <a
+                    href="https://wa.me/923102362190"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ImWhatsapp className="hover:scale-125" />
+                  </a>
                 </div>
 
                 <div>

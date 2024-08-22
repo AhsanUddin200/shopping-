@@ -6,7 +6,7 @@ import { TbShoppingCartSearch } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
 import { FaHeartCirclePlus } from "react-icons/fa6";
 import { HiOutlineShoppingBag } from "react-icons/hi";
-import kapray1 from '../../public/kapray1.png'
+import logo1 from '../../public/logo1 (2).png'
 import { useState,useEffect } from "react";
 
 const HeaderMain = () => {
@@ -28,7 +28,7 @@ useEffect (()=> {
           <div className="container sm:flex justify-between items-center">
             <div className="flex justify-center sm:justify-start font-bold text-4xl text-center pb-4 sm:pb-0 text-blackish">
               <Image
-                src={kapray1}
+                src={logo1}
                 alt="Description of the image"
              
                 className="px-8 w-[150px]"

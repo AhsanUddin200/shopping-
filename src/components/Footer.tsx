@@ -27,7 +27,7 @@ const Footer = () => {
                 />{" "}
               </div>
               <p>
-                کپڑے جی mission is to blend tradition and modernity in
+                FashionFolio mission is to blend tradition and modernity in
                 high-quality garments that showcase Pakistan's rich cultural
                 heritage. We empower individuals through our designs, promoting
                 confidence and self-expression, while committing to
@@ -93,7 +93,7 @@ const Footer = () => {
               <div className="mt-5 font-semibold">Email</div>
               <p className="bg-white text-black px-4 rounded-lg mt-3 text-sm font-serif">
                 {" "}
-                Kaprayji2024@gmail.com
+                FashionFolio2024@gmail.com
               </p>
 
               <div className="mt-4 font-semibold">Site Address</div>
