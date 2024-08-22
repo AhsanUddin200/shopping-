@@ -72,7 +72,7 @@ const Products = () => {
     {
       img: "/kids shirt.webp",
       title: "Shirts",
-      desc: "Comfortable stylish shirts for kids.",
+      desc: "Comfortable stylish shirts for boys.",
       rating: 3,
       price: "11.90",
       gender: "kids",
@@ -88,7 +88,7 @@ const Products = () => {
     {
       img: "/kids.jpg",
       title: "Sleepwear",
-      desc: "Kids comfortable cozy garment for sleepwear.",
+      desc: "Boys comfortable cozy garment for sleepwear.",
       rating: 5,
       price: "17.90",
       gender: "kids",
@@ -104,37 +104,37 @@ const Products = () => {
     // For Girls
     {
       img: "/girl1.webp",
-      title: "Pants Jeans",
-      desc: "Jeans durable made from denim fabric.",
+      title: "Kurti",
+      desc: "Kurti is a versatile garment.",
       rating: 4,
-      price: "19.90",
+      price: "14.55",
       gender: "girls",
     },
 
     {
       img: "/girl2.webp",
-      title: "Pants Jeans",
-      desc: "Jeans durable made from denim fabric.",
-      rating: 4,
-      price: "19.90",
+      title: "Frock",
+      desc: "Flattering silhouette, stylish fabrics.",
+      rating: 1,
+      price: "16.25",
       gender: "girls",
     },
 
     {
       img: "/girl3.webp",
-      title: "Pants Jeans",
-      desc: "Jeans durable made from denim fabric.",
-      rating: 4,
+      title: "Casuals",
+      desc: "Casuals dress everyday  relaxed fabrics .",
+      rating: 5,
       price: "19.90",
       gender: "girls",
     },
 
     {
       img: "/girls4.webp",
-      title: "Pants Jeans",
-      desc: "Jeans durable made from denim fabric.",
-      rating: 4,
-      price: "19.90",
+      title: "Maksi",
+      desc: " Maksi  flowing dress elegance and comfort..",
+      rating: 2,
+      price: "45.10",
       gender: "girls",
     },
   ];
