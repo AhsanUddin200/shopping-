@@ -16,7 +16,7 @@ const Banner: React.FC = () => {
   const Data = [
     {
       id: 0,
-      img: "/banner1.png",
+      img: "/banner1.jpg",
       Title: "First Banner",
       mainTitle: "LATEST FASHION SHOW",
       Price: "$9"
@@ -24,17 +24,26 @@ const Banner: React.FC = () => {
     {
       id: 1,
       img: "/banner2.png",
-      Title: "New Arrival",
-      mainTitle: "Limited Edition",
-      Price: "$9"
-    },
-    {
-      id: 2,
-      img: "/banner3.png",
       Title: "New Trends",
       mainTitle: "SUMMER STYLE",
       Price: "$9"
     },
+    
+    {
+      id: 2,
+      img: "/banner3.png",
+      Title: "First Banner",
+      mainTitle: "LATEST FASHION SHOW",
+      Price: "$9"
+    },
+    {
+      id: 3,
+      img: "/banner4.JPG",
+      Title: "New Arrival",
+      mainTitle: "Limited Edition",
+      Price: "$9"
+    },
+    
   ];
 
   return (

@@ -103,7 +103,7 @@ const Footer = () => {
               </p> */}
                 <div className=" px-2 rounded-lg mt-2 text-sm font-mono" >    
                   <Typewriter
-                  words={[" Survey Nos. 36 and 112 Deagu, South Korea", ""]}
+                  words={[" 184, gulshan avenue, gulshan 2, 121, Dhaka,  Bangladesh", ""]}
                   loop={true}
                   cursor
                   cursorStyle=".."
