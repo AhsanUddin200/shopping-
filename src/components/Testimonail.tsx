@@ -4,7 +4,7 @@ import article from '../../public/article.png'
 const Testimonail = () => {
   return (
   <>
-  <div className='container pt-16 pb-16 grid-cols-2'>
+  <div id='Testimonail' className='container pt-16 pb-16 grid-cols-2'>
   <div className="font-serif text-3xl pb-4 text-gray-400 text-center"> Testimonails
     <div className='w-full flex flex-col justify-center items-center sm:flex-row sm:justify-normal gap-4 mt-5'>
         <div className=' w-full sm:w-1/3  h-full space-x-3 space-y-10 border border-b-3 border-t-8 rounded-2xl border-gray-600 items-center flex flex-col '>

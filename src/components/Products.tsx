@@ -150,7 +150,7 @@ const Products = () => {
         Our Products
       </div>
       <div className="text-center text-sm">FOR MEN</div>
-      <div className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
+      <div id="Products1" className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
         {menProducts.map((item, index) => (
           <ProductCard
             key={index}
@@ -163,7 +163,7 @@ const Products = () => {
         ))}
       </div>
       <div className="text-center text-sm mt-10">FOR WOMEN</div>
-      <div className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
+      <div id="Products2" className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
         {womenProducts.map((item, index) => (
           <ProductCard
             key={index}
@@ -176,7 +176,7 @@ const Products = () => {
         ))}
       </div>
       <div className="text-center text-sm mt-10">FOR BOYS</div>
-      <div className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
+      <div id="Products3" className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
         {kidsProducts.map((item, index) => (
           <ProductCard
             key={index}
@@ -189,7 +189,7 @@ const Products = () => {
         ))}
       </div>
       <div className="text-center text-sm mt-10">FOR GIRLS</div>
-      <div className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
+      <div id="Products4" className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
         {girlsProducts.map((item, index) => (
           <ProductCard
             key={index}
