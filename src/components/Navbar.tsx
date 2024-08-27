@@ -3,7 +3,10 @@ import Link from 'next/link'
 import React from 'react'
 import { useState,useEffect } from 'react';
 import { Link as ScrollLink } from "react-scroll";
-import Testimonail from './Testimonail';
+import {motion} from  'framer-motion';
+import variants from '@variants'
+import { once } from 'events';
+import { fade } from '@/variants';
 
 const Navbar = () => {
   
@@ -14,7 +17,15 @@ const Navbar = () => {
     <div className='hidden lg:block'>
         <div className='container'>
 
-            <div className='flex w-fit gap-12 mx-auto font-semibold py-5 text-blackish'>
+            <motion.div 
+            variants={fade({direction:"down", delay:0.3})}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{once: false, amount: 0.2}}
+
+            
+            
+            className='flex w-fit gap-12 mx-auto font-semibold py-5 text-blackish'>
 
             <ScrollLink 
               activeClass="active" 
@@ -158,7 +169,7 @@ const Navbar = () => {
                   TESTIMONAILS
                 </ScrollLink>
 
-            </div>
+            </motion.div>
 
         </div>
     </div>

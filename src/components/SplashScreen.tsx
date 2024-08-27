@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 import anime from 'animejs';
 import Image from 'next/image';
 import logo1 from '../../public/logo1 (2).png';
+import {motion} from  'framer-motion';
+import variants from '@variants'
+import { once } from 'events';
+import { fade } from '@/variants';
 
 function SplashScreen({ finishLoading }: { finishLoading: () => void }) {
   const [isMounted, setIsMounted] = useState(false);
@@ -15,7 +19,7 @@ function SplashScreen({ finishLoading }: { finishLoading: () => void }) {
       targets: '#logo',
       delay: 0,
       scale: [0, 1],
-      duration: 3000,
+      duration: 4000,
       easing: 'easeInOutExpo',
     });
   };
@@ -30,13 +34,24 @@ function SplashScreen({ finishLoading }: { finishLoading: () => void }) {
     <div className='flex h-screen items-center justify-center' >
       {/* <Image id='logo' src="logo1" alt='Logo' width={60} height={60} /> */}
      
-      <div className="relative w-[440px]">
+      <motion.div
+         variants={fade({direction:"up", delay:0.3})}
+         initial="hidden"
+         whileInView={"show"}
+         viewport={{once: false, amount: 0.2}}
+      
+      className="relative w-[440px]">
   <Image
     src={logo1}
     alt="Brand Logo"
     className="px-8 w-full hover:scale-150 blur-sm"
   />
-  <div role="status" className="absolute inset-0 flex justify-center items-center ">
+  <motion.div 
+     variants={fade({direction:"down", delay:0.5})}
+     initial="hidden"
+     whileInView={"show"}
+     viewport={{once: false, amount: 0.2}}
+  role="status" className="absolute inset-0 flex justify-center items-center ">
     <svg
       aria-hidden="true"
       className="w-8 h-8 text-gray-200 animate-spin dark:text-gray-800 fill-yellow-700"
@@ -54,8 +69,8 @@ function SplashScreen({ finishLoading }: { finishLoading: () => void }) {
       />
     </svg>
     <span className="sr-only">Loading...</span>
-  </div>
-</div>
+  </motion.div>
+</motion.div>
 
     </div>
   );
