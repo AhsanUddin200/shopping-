@@ -5,13 +5,26 @@ import { SiDiscord } from "react-icons/si";
 import { CgInstagram } from "react-icons/cg";
 import { ImWhatsapp } from "react-icons/im";
 import { Typewriter } from "react-simple-typewriter";
+import {motion} from  'framer-motion';
+import variants from '@variants'
+import { once } from 'events';
+import { fade } from '@/variants';
+
 
 const Footer = () => {
   return (
     <>
-      <div className="w-full h-2/5 ">
+      <div
+        
+       className="w-full h-2/5 ">
         <div className=" px-24 flex flex-col  sm:flex-row bg-black text-white gap-24">
-          <div className="mt-5 space-y-4  mb-4">
+          <motion.div 
+               
+                variants={fade({direction:"right", delay:0.3})}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{once: false, amount: 0.2}}
+          className="mt-5 space-y-4  mb-4">
             <h1 className="font-bold text-xl underline decoration-yellow-600">
               Company
             </h1>
@@ -34,9 +47,14 @@ const Footer = () => {
                 sustainability, ethical practices, and community engagement
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col sm:flex-row bg-black text-white">
+          <motion.div
+             variants={fade({direction:"left", delay:0.3})}
+             initial="hidden"
+             whileInView={"show"}
+             viewport={{once: false, amount: 0.2}}
+           className="flex flex-col sm:flex-row bg-black text-white">
             <div className="mt-5 space-y-4  mb-4">
               <h1 className="font-bold text-xl underline decoration-yellow-600">
                 Company
@@ -49,8 +67,15 @@ const Footer = () => {
                 <p>Program</p>
               </div>
             </div>
-          </div>
-          <div className="flex flex-col sm:flex-row bg-black text-white gap-24">
+          </motion.div>
+          <motion.div 
+                
+                variants={fade({direction:"left", delay:0.3})}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{once: false, amount: 0.2}}
+          
+          className="flex flex-col sm:flex-row bg-black text-white gap-24">
             <div className="mt-5 space-y-4  mb-4">
               <h1 className="font-bold text-xl underline decoration-yellow-600">
                 Categories
@@ -63,8 +88,15 @@ const Footer = () => {
                 <p>Infant</p>
               </div>
             </div>
-          </div>
-          <div className="flex flex-col sm:flex-row bg-black text-white gap-24">
+          </motion.div>
+          <motion.div 
+                
+                variants={fade({direction:"left", delay:0.3})}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{once: false, amount: 0.2}}
+          
+          className="flex flex-col sm:flex-row bg-black text-white gap-24">
             <div className="mt-5 space-y-4  mb-4">
               <h1 className="font-bold text-xl inline-block border-b-2 border-yellow-600">
                 Help
@@ -77,9 +109,15 @@ const Footer = () => {
                 <p> Options</p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col sm:flex-row bg-black text-white">
+          <motion.div 
+                
+                variants={fade({direction:"left", delay:0.3})}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{once: false, amount: 0.2}}
+          className="flex flex-col sm:flex-row bg-black text-white">
             <div className="mt-5 ">
               <h1 className="font-bold text-xl inline-block border-b-2 border-yellow-600">
                 Reach Us
@@ -110,7 +148,7 @@ const Footer = () => {
                 /></div>
               
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

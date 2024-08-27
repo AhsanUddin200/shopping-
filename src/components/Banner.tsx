@@ -2,6 +2,10 @@
 import React from 'react';
 import Slider from 'react-slick';
 import Slide from './Slide';
+import variants from '@variants'
+import { once } from 'events';
+import { fade } from '@/variants';
+import {motion} from "framer-motion"
 
 const Banner: React.FC = () => {
   const settings = {
@@ -47,7 +51,12 @@ const Banner: React.FC = () => {
   ];
 
   return (
-    <div id="Banner"  className='container pt-6 lg:pt-0'>
+    <motion.div
+    variants={fade({direction:"up", delay:0.7})}
+    initial="hidden"
+    whileInView={"show"}
+    viewport={{once: false, amount: 0.5}}
+     id="Banner"  className='container pt-6 lg:pt-0'>
       <Slider {...settings}>
         {Data.map((item) => (
           <Slide
@@ -59,7 +68,7 @@ const Banner: React.FC = () => {
           />
         ))}
       </Slider>
-    </div>
+    </motion.div>
   );
 };
 

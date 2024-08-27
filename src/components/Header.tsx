@@ -4,11 +4,19 @@ import { SiDiscord } from "react-icons/si";
 import { CgInstagram } from "react-icons/cg";
 import { ImWhatsapp } from "react-icons/im";
 import Theme from "./Theme";
+import {motion} from  'framer-motion';
+import variants from '@variants'
+import { once } from 'events';
+import { fade } from '@/variants';
+
 const Header = () => {
   return (
     <>
       <div className="">
-        <div className="dark:bg-dark border-b border-gray-400 hidden sm:block">
+        <div
+       
+        
+        className="dark:bg-dark border-b border-gray-400 hidden sm:block">
           <div className="container py-4">
             <div className="flex justify-between items-center">
               <div className="flex gap-5">
@@ -50,7 +58,13 @@ const Header = () => {
               <div className="text-gray-600 text-[14px]">
                 <b>GAALA SALE</b> THIS WEEKEND ORDER OVER NOW!!
               </div>
-              <div className="hidden  lg:flex gap-5">
+              <motion.div
+               variants={fade({direction:"left", delay:0.1})}
+               initial="hidden"
+               whileInView={"show"}
+               viewport={{once: false, amount: 0.2}}
+       
+               className="hidden  lg:flex gap-5">
 
                 <div className="header__icon_wrapper">
                   <a href="https://www.facebook.com/ahsan.nasir.509/" target="_blank" rel="noopener noreferrer">
@@ -81,7 +95,7 @@ const Header = () => {
                 <div>
                   <Theme />
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

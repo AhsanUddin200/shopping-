@@ -1,4 +1,7 @@
 import React from 'react';
+import variants from '@variants'
+import { once } from 'events';
+import { fade } from '@/variants';
 
 interface PropsType {
   img: string;

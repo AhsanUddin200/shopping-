@@ -2,6 +2,8 @@ import React from "react";
 import ProductCard from "./ProductCard";
 
 
+
+
 const Products = () => {
   const itemsdata = [
     {
@@ -146,12 +148,17 @@ const Products = () => {
   const girlsProducts = itemsdata.filter((item) => item.gender === "girls");
 
   return (
-    <div id="Products" className="container pt-16">
+    <div 
+   
+    id="Products" className="container pt-16">
       <div className="font-serif text-3xl pb-4 text-gray-400 text-center">
         Our Products
       </div>
       <div className="text-center text-sm">FOR MEN</div>
-      <div id="Products1" className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
+      <div 
+         
+      
+      id="Products1" className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
         {menProducts.map((item, index) => (
           <ProductCard
             key={index}
