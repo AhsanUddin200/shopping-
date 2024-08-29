@@ -158,7 +158,7 @@ const Products = () => {
       <div 
          
       
-      id="Products1" className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
+      id="Products1" className="grid grid-cols-2 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
         {menProducts.map((item, index) => (
           <ProductCard
             key={index}
