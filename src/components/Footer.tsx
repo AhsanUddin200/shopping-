@@ -5,32 +5,27 @@ import { SiDiscord } from "react-icons/si";
 import { CgInstagram } from "react-icons/cg";
 import { ImWhatsapp } from "react-icons/im";
 import { Typewriter } from "react-simple-typewriter";
-import {motion} from  'framer-motion';
-import variants from '@variants'
-import { once } from 'events';
+import { motion } from 'framer-motion';
+import variants from '@variants';
 import { fade } from '@/variants';
-
 
 const Footer = () => {
   return (
     <>
-      <div
-        
-       className="w-full h-2/5 ">
-        <div className=" px-24 flex flex-col  sm:flex-row bg-black text-white gap-24">
-          <motion.div 
-               
-                variants={fade({direction:"right", delay:0.3})}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{once: false, amount: 0.2}}
-          className="mt-5 space-y-4  mb-4">
+      <div className="w-full h-2/5 ">
+        <div className="px-24 flex flex-col sm:flex-row bg-black text-white gap-24">
+          <motion.div
+            variants={fade({ direction: "right", delay: 0.3 })}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.2 }}
+            className="mt-5 space-y-4 mb-4"
+          >
             <h1 className="font-bold text-xl underline decoration-yellow-600">
               Company
             </h1>
-            <div className="font-mono space-y-4  ">
+            <div className="font-mono space-y-4">
               {/* <h2 className="font-thin text-lg">Mission Statment</h2> */}
-
               <div className="font-thin text-lg">
                 <Typewriter
                   words={["Mission Statment", "Mission Statment"]}
@@ -41,7 +36,7 @@ const Footer = () => {
               </div>
               <p>
                 FashionFolio mission is to blend tradition and modernity in
-                high-quality garments that showcase Pakistan's rich cultural
+                high-quality garments that showcase Pakistan&apos;s rich cultural
                 heritage. We empower individuals through our designs, promoting
                 confidence and self-expression, while committing to
                 sustainability, ethical practices, and community engagement
@@ -50,16 +45,17 @@ const Footer = () => {
           </motion.div>
 
           <motion.div
-             variants={fade({direction:"left", delay:0.3})}
-             initial="hidden"
-             whileInView={"show"}
-             viewport={{once: false, amount: 0.2}}
-           className="flex flex-col sm:flex-row bg-black text-white">
-            <div className="mt-5 space-y-4  mb-4">
+            variants={fade({ direction: "left", delay: 0.3 })}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.2 }}
+            className="flex flex-col sm:flex-row bg-black text-white"
+          >
+            <div className="mt-5 space-y-4 mb-4">
               <h1 className="font-bold text-xl underline decoration-yellow-600">
                 Company
               </h1>
-              <div className="font-mono space-y-4  ">
+              <div className="font-mono space-y-4">
                 <p>About Us</p>
                 <p>Services</p>
                 <p>Privacy </p>
@@ -68,19 +64,19 @@ const Footer = () => {
               </div>
             </div>
           </motion.div>
-          <motion.div 
-                
-                variants={fade({direction:"left", delay:0.3})}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{once: false, amount: 0.2}}
-          
-          className="flex flex-col sm:flex-row bg-black text-white gap-24">
-            <div className="mt-5 space-y-4  mb-4">
+
+          <motion.div
+            variants={fade({ direction: "left", delay: 0.3 })}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.2 }}
+            className="flex flex-col sm:flex-row bg-black text-white gap-24"
+          >
+            <div className="mt-5 space-y-4 mb-4">
               <h1 className="font-bold text-xl underline decoration-yellow-600">
                 Categories
               </h1>
-              <div className="font-mono space-y-4 ">
+              <div className="font-mono space-y-4">
                 <p>MAN</p>
                 <p>Woman</p>
                 <p>Baby</p>
@@ -89,20 +85,19 @@ const Footer = () => {
               </div>
             </div>
           </motion.div>
-          <motion.div 
-                
-                variants={fade({direction:"left", delay:0.3})}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{once: false, amount: 0.2}}
-          
-          className="flex flex-col sm:flex-row bg-black text-white gap-24">
-            <div className="mt-5 space-y-4  mb-4">
+
+          <motion.div
+            variants={fade({ direction: "left", delay: 0.3 })}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.2 }}
+            className="flex flex-col sm:flex-row bg-black text-white gap-24"
+          >
+            <div className="mt-5 space-y-4 mb-4">
               <h1 className="font-bold text-xl inline-block border-b-2 border-yellow-600">
                 Help
               </h1>
-
-              <div className="font-mono space-y-4 ">
+              <div className="font-mono space-y-4">
                 <p>FAQs</p>
                 <p>Return</p>
                 <p>Order </p>
@@ -111,18 +106,18 @@ const Footer = () => {
             </div>
           </motion.div>
 
-          <motion.div 
-                
-                variants={fade({direction:"left", delay:0.3})}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{once: false, amount: 0.2}}
-          className="flex flex-col sm:flex-row bg-black text-white">
+          <motion.div
+            variants={fade({ direction: "left", delay: 0.3 })}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.2 }}
+            className="flex flex-col sm:flex-row bg-black text-white"
+          >
             <div className="mt-5 ">
               <h1 className="font-bold text-xl inline-block border-b-2 border-yellow-600">
                 Reach Us
               </h1>
-              <div className="flex gap-5 mt-4 ">
+              <div className="flex gap-5 mt-4">
                 <ImWhatsapp className="scale-125" />
                 <CgInstagram className="scale-125" />
                 <SiDiscord className="scale-125" />
@@ -133,20 +128,19 @@ const Footer = () => {
                 {" "}
                 FashionFolio2024@gmail.com
               </p>
-
               <div className="mt-4 font-semibold">Site Address</div>
               {/* <p className="  px-2 rounded-lg mt-2 text-sm font-mono">
                 {" "}
                 Survey Nos. 36 and 112 Deagu, South Korea
               </p> */}
-                <div className=" px-2 rounded-lg mt-2 text-sm font-mono" >    
-                  <Typewriter
-                  words={[" 184, gulshan avenue, gulshan 2, 121, Dhaka,  Bangladesh", ""]}
+              <div className="px-2 rounded-lg mt-2 text-sm font-mono">
+                <Typewriter
+                  words={[" 184, gulshan avenue, gulshan 2, 121, Dhaka, Bangladesh", ""]}
                   loop={true}
                   cursor
                   cursorStyle=".."
-                /></div>
-              
+                />
+              </div>
             </div>
           </motion.div>
         </div>
