@@ -19,7 +19,7 @@ useEffect (()=> {
   },4000)
 
   return () => clearInterval(interval)
-},[])
+},[placeholder.length])
 
   return (
     <>

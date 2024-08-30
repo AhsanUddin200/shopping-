@@ -1,56 +1,49 @@
 "use client"
 import Link from 'next/link'
 import React from 'react'
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link as ScrollLink } from "react-scroll";
-import {motion} from  'framer-motion';
+import { motion } from 'framer-motion';
 import variants from '@variants'
-import { once } from 'events';
 import { fade } from '@/variants';
 
 const Navbar = () => {
-  
   return (
-  <>
-  <div >
-
-    <div className='hidden lg:block'>
-        <div className='container'>
-
-            <motion.div 
-            variants={fade({direction:"down", delay:0.3})}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{once: false, amount: 0.2}}
-
-            
-            
-            className='flex w-fit gap-12 mx-auto font-semibold py-5 text-blackish'>
-
-            <ScrollLink 
-              activeClass="active" 
-              to="Banner" 
-              spy={true} 
-              offset={-50} 
-              smooth={true} 
-              duration={500} 
-              className="navbar__link relative underline:transition-pink-800 cursor-pointer"
+    <>
+      <div>
+        <div className='hidden lg:block'>
+          <div className='container'>
+            <motion.div
+              variants={fade({ direction: "down", delay: 0.3 })}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.2 }}
+              className='flex w-fit gap-12 mx-auto font-semibold py-5 text-blackish'
             >
-             HOME
-            </ScrollLink>
-        
-                <div className="relative group">
-                <ScrollLink
+              <ScrollLink
                 activeClass="active"
-                to="Products1"
+                to="Banner"
                 spy={true}
                 offset={-50}
                 smooth={true}
-                duration={700}
+                duration={500}
                 className="navbar__link relative underline:transition-pink-800 cursor-pointer"
-            >
-              MEN'S
-            </ScrollLink>
+              >
+                HOME
+              </ScrollLink>
+
+              <div className="relative group">
+                <ScrollLink
+                  activeClass="active"
+                  to="Products1"
+                  spy={true}
+                  offset={-50}
+                  smooth={true}
+                  duration={700}
+                  className="navbar__link relative underline:transition-pink-800 cursor-pointer"
+                >
+                  MEN&apos;S
+                </ScrollLink>
                 <div className="absolute left-0 z-10 hidden group-hover:block mt-1 font-normal bg-white divide-y divide-gray-100 rounded-xl shadow w-32 dark:bg-gray-200 dark:divide-gray-900">
                   <ul className="py-2 text-sm text-black dark:text-gray-900" aria-labelledby="dropdownLargeButton">
                     <li>
@@ -79,16 +72,16 @@ const Navbar = () => {
               </div>
 
               <div className="relative group">
-                <ScrollLink 
-                activeClass="active"
-                to="Products2"
-                spy={true}
-                offset={-50}
-                smooth={true}
-                duration={800}
-                className="navbar__link relative underline:transition-pink-800 cursor-pointer"
+                <ScrollLink
+                  activeClass="active"
+                  to="Products2"
+                  spy={true}
+                  offset={-50}
+                  smooth={true}
+                  duration={800}
+                  className="navbar__link relative underline:transition-pink-800 cursor-pointer"
                 >
-                  WOMEN'S
+                  WOMEN&apos;S
                 </ScrollLink>
                 <div className="absolute left-0 z-10 hidden group-hover:block mt-1 font-normal bg-white divide-y divide-gray-100 rounded-xl shadow w-32 dark:bg-gray-200 dark:divide-gray-900">
                   <ul className="py-2 text-sm text-black dark:text-gray-900" aria-labelledby="dropdownLargeButton">
@@ -117,11 +110,7 @@ const Navbar = () => {
                 </div>
               </div>
 
-                
-                
-                
-
-                <ScrollLink
+              <ScrollLink
                 activeClass="active"
                 to="Products3"
                 spy={true}
@@ -129,11 +118,11 @@ const Navbar = () => {
                 smooth={true}
                 duration={800}
                 className="navbar__link relative underline:transition-pink-800 cursor-pointer"
-                >
-                  KIDS
-                </ScrollLink>
+              >
+                KIDS
+              </ScrollLink>
 
-                <ScrollLink 
+              <ScrollLink
                 activeClass="active"
                 to="Products4"
                 spy={true}
@@ -141,40 +130,39 @@ const Navbar = () => {
                 smooth={true}
                 duration={900}
                 className="navbar__link relative underline:transition-pink-800 cursor-pointer"
-                >
-                  GIRLS
-                </ScrollLink>
+              >
+                GIRLS
+              </ScrollLink>
 
-                <ScrollLink 
-              activeClass="active" 
-              to="Products" 
-              spy={true} 
-              offset={-50} 
-              smooth={true} 
-              duration={700} 
-              className="navbar__link relative underline:transition-pink-800 cursor-pointer"
-            >
-              CATEGORIES
-            </ScrollLink>
-                <Link className="navbar__link relative underline:transition-pink-800" href="#">SELL OFFER</Link>
+              <ScrollLink
+                activeClass="active"
+                to="Products"
+                spy={true}
+                offset={-50}
+                smooth={true}
+                duration={700}
+                className="navbar__link relative underline:transition-pink-800 cursor-pointer"
+              >
+                CATEGORIES
+              </ScrollLink>
+              <Link className="navbar__link relative underline:transition-pink-800" href="#">SELL OFFER</Link>
 
-                <ScrollLink 
+              <ScrollLink
                 activeClass="active"
                 to="Testimonail"
                 spy={true}
                 smooth={true}
                 offset={-50}
                 duration={900}
-                className="navbar__link relative underline:transition-pink-800 cursor-pointer">
-                  TESTIMONAILS
-                </ScrollLink>
-
+                className="navbar__link relative underline:transition-pink-800 cursor-pointer"
+              >
+                TESTIMONAILS
+              </ScrollLink>
             </motion.div>
-
+          </div>
         </div>
-    </div>
-  </div>
-  </>
+      </div>
+    </>
   )
 }
 

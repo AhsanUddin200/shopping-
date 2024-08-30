@@ -28,7 +28,7 @@ function SplashScreen({ finishLoading }: { finishLoading: () => void }) {
     const timeout = setTimeout(() => setIsMounted(true), 10);
     animate();
     return () => clearTimeout(timeout);
-  }, []);
+  }, [animate]);
 
   return (
     <div className='flex h-screen items-center justify-center' >

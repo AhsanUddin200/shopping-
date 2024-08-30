@@ -2,6 +2,7 @@ import React from 'react';
 import variants from '@variants'
 import { once } from 'events';
 import { fade } from '@/variants';
+import Image from 'next/image';
 
 interface PropsType {
   img: string;
@@ -24,7 +25,7 @@ const Slide: React.FC<PropsType> = ({ img, title, mainTitle, price }) => {
         </div>
       </div>
       <div className='flex justify-center items-center'>
-      <img src={img} alt={title} className='w-[1400px]'  />
+      <img src={img} alt={title} className='w-[1400px]' width={500} height={300}  />
 
       </div>
     </div>

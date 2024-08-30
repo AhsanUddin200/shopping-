@@ -32,5 +32,11 @@
   .navbar__link:hover::after {
     transform: scale(1);
   }
+
+  @media (min-width: 640px) {
+    .sm-object-cover {
+      @apply object-cover;
+    }
+  }
   
 }
