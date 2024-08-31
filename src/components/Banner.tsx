@@ -2,7 +2,6 @@
 import React from 'react';
 import Slider from 'react-slick';
 import Slide from './Slide';
-import variants from '@variants'
 import { once } from 'events';
 import { fade } from '@/variants';
 import {motion} from "framer-motion"
