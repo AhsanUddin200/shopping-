@@ -5,7 +5,6 @@ import { CgInstagram } from "react-icons/cg";
 import { ImWhatsapp } from "react-icons/im";
 import Theme from "./Theme";
 import {motion} from  'framer-motion';
-import variants from '@variants'
 import { once } from 'events';
 import { fade } from '@/variants';
 
