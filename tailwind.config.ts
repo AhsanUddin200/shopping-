@@ -6,25 +6,22 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode : 'class',
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        "dark" : "#232A3C",
-        "medium" : "#293245",
-
+        dark: "#232A3C",
+        medium: "#293245",
+        accent: "#FF8F9C",
+        blackish: "#1b1b1b",
       },
       container: {
-        center : true,
-        padding: "15px"
-      },
-
-      colors: {
-        accent : "#FF8F9C",
-        blackish: "#1b1b1b",
+        center: true,
+        padding: "15px",
       },
     },
   },
   plugins: [],
 };
+
 export default config;
