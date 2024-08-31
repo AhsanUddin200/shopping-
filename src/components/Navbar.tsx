@@ -4,7 +4,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { Link as ScrollLink } from "react-scroll";
 import { motion } from 'framer-motion';
-import variants from '@variants'
+
 import { fade } from '@/variants';
 
 const Navbar = () => {

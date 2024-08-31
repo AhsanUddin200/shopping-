@@ -3,7 +3,6 @@ import anime from 'animejs';
 import Image from 'next/image';
 import logo1 from '../../public/logo1 (2).png';
 import { motion } from 'framer-motion';
-import variants from '@variants';
 import { fade } from '@/variants';
 
 function SplashScreen({ finishLoading }: { finishLoading: () => void }) {

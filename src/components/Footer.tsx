@@ -6,7 +6,6 @@ import { CgInstagram } from "react-icons/cg";
 import { ImWhatsapp } from "react-icons/im";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from 'framer-motion';
-import variants from '@variants';
 import { fade } from '@/variants';
 
 const Footer = () => {

@@ -1,7 +1,6 @@
 import React from 'react';
-import variants from '@variants';
+import { fade } from '@/variants'; 
 import { once } from 'events';
-import { fade } from '@/variants';
 import Image from 'next/image';
 
 interface PropsType {
