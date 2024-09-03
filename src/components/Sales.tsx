@@ -13,19 +13,20 @@ export default function Sales() {
         </div>
       </div>
 
-      <div className="flex  sm:px-4  flex-col sm:flex-row sm:mt-24 justify-center items-center mb-12">
+      <div className="flex  sm:px-4  flex-col sm:flex-row sm:mt-24 justify-center items-center mb-12 rounded-2xl bg-white shadow-xl">
         <div className="flex md:flex-row sm:flex-col gap-8">
-        <div className="mb-2 mt-24 sm:mt-12 sm:px-16 lg:px-16">
-  <Image
-    src={sale2}
-    alt="sale offer"
-    width={500} // Increased width for sm screens
-    height={30}
-    className="w-full sm:w-auto"
-  />
-  <p className="mt-1 text-center text-sm">Kurti san se pehli</p>
-  <p className="mt-2 text-center">Text </p>
-</div>
+          <div className="mb-2 mt-24 sm:mt-12 sm:px-16 lg:px-16 ">
+            <Image
+              src="https://images.unsplash.com/photo-1631005438015-a2d58390d01e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="sale offer"
+              width={500}
+              height={200}
+              className="w-full sm:w-auto rounded-md hover:blur-sm"
+            />
+
+            <p className="mt-1 text-center text-sm">Kurti san se pehli</p>
+            <p className="mt-2 text-center">Text </p>
+          </div>
 
           <div className="flex flex-col justify-center items-center gap-6 mt-1">
             <div className="flex flex-col sm-flex-row items-center">
@@ -66,10 +67,10 @@ export default function Sales() {
 
             <div>
               <Image
-                className="w-24  sm:w-32 h-28 object-cover"
-                src={sale2}
+                className="w-24  sm:w-32 h-32 object-cover"
+                src="https://images.unsplash.com/photo-1578897366846-358bb1c2412a?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="sale offer"
-                width={100}
+                width={400}
                 height={100}
               />{" "}
               <p className="mt-1 text-center text-sm">Kurti</p>
@@ -79,7 +80,11 @@ export default function Sales() {
         </div>
 
         <div className="px-12 ">
-          <Image src={sale1} alt="sale offer" width={500} height={500} />
+          <Image src="https://images.unsplash.com/photo-1710868941935-4ecf76ce8a6d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+           alt="sale offer"
+            width={500}
+             height={500} 
+             className="object-cover rounded-md hover:blur-sm"/>
         </div>
       </div>
     </>
