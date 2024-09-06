@@ -14,6 +14,10 @@ const config: Config = {
         medium: "#293245",
         accent: "#FF8F9C",
         blackish: "#1b1b1b",
+        customGreen: '#04AA6D',
+      },
+      backgroundImage: {
+        customImage: "url('https://images.pexels.com/photos/8030171/pexels-photo-8030171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
       },
       container: {
         center: true,

@@ -25,14 +25,14 @@ export default function Sales() {
 
   return (
     <>
-      <div className="font-serif text-3xl pb-2 text-gray-200 text-center  ">
-        Sales Offer
-        <div className="text-center text-sm font-serif">
-          For Men,Woman,Boys & Girls
-        </div>
+      
+   
+      <div className="font-serif text-3xl pb-4 text-gray-400 text-center">
+      Sales Offer
       </div>
+      <div className="text-center text-sm"> For Men,Woman,Boys & Girls</div>
 
-      <div className=" flex px-2 sm:px-4  flex-col sm:flex-row sm:mt-24 justify-center items-center mb-12 rounded-2xl bg-white shadow-2xl   ">
+      <div className=" flex px-2 bg-gray-300 sm:px-4 flex-col sm:flex-row sm:mt-8 justify-center items-center mb-12 rounded-2xl shadow-2xl w-full min-h-screen  ">
         {visible && (
           <div className=" bg-red-600  w-25 text-gray-400 text-center rounded-e-2xl font-bold text-xl h-full">
             <p>Flat 50% off</p>
@@ -49,9 +49,14 @@ export default function Sales() {
               height={200}
               className="w-full sm:w-auto rounded-md hover:blur-sm"
             />
-
-            <p className="mt-1 text-center text-sm">Kurti san se pehli</p>
-            <p className="mt-2 text-center">Text </p>
+ <div className="flex gap-4 ">
+              <del className="mt-2 text-center text ml-32" >$126</del>
+              <p className="mt-2 text-center font-bold">${parseInt(126 / 2)}</p>
+              </div>
+              <button className="border border-gray-400  hover:border-transparent px-3 rounded-md hover:bg-red-500 text-black hover:text-white ml-[140px]">
+                Shop
+              </button>
+           
           </div>
 
           <div className="flex flex-col justify-center items-center gap-6 mt-1">
@@ -63,8 +68,17 @@ export default function Sales() {
                 width={200}
                 height={100}
               />
-              <p className="mt-1 text-center text-sm">Kurti</p>
-              <p className="mt-2 text-center">Text Below Image 1</p>
+              
+              <div className="flex gap-4">
+              <del className="mt-2 text-center text">$55</del>
+              <p className="mt-2 text-center font-bold">${parseInt(55/2) }</p>
+              </div>
+              <button className="border border-gray-400  hover:border-transparent px-3 rounded-md hover:bg-red-500 text-black hover:text-white">
+                Shop
+              </button>
+         
+
+
             </div>
             <div className="flex flex-col items-center">
               <Image
@@ -74,7 +88,13 @@ export default function Sales() {
                 width={200}
                 height={100}
               />
-              <p className="mt-2 text-center">Text Below Image 2</p>
+                <div className="flex gap-4">
+              <del className="mt-2 text-center text ">$67</del>
+              <p className="mt-2 text-center font-bold">${parseInt(67/2) }</p>
+              </div>
+              <button className="border border-gray-400  hover:border-transparent px-3 rounded-md hover:bg-red-500 text-black hover:text-white">
+                Shop
+              </button>
             </div>
           </div>
 
@@ -87,8 +107,13 @@ export default function Sales() {
                 width={200}
                 height={100}
               />{" "}
-              <p className="mt-1 text-center text-sm">Kurti</p>
-              <p className="mt-2 text-center">Text Below Image 1</p>
+               <div className="flex gap-4">
+              <del className="mt-2 text-center text">$100</del>
+              <p className="mt-2 text-center font-bold">${parseInt(100/2) }</p>
+              </div>
+              <button className="border border-gray-400  hover:border-transparent px-3 rounded-md hover:bg-red-500 text-black hover:text-white text-center ml-3">
+                Shop
+              </button> 
             </div>
 
             <div>
@@ -99,8 +124,14 @@ export default function Sales() {
                 width={200}
                 height={100}
               />{" "}
-              <p className="mt-1 text-center text-sm">Kurti</p>
-              <p className="mt-2 text-center">Text Below Image 1</p>
+               <div className="flex gap-4 px-12">
+              <del className="mt-2 text-center text ">$96</del>
+              <p className="mt-2 text-center font-bold">${parseInt(96) - 48}</p>
+              </div>
+              <button className=" ml-14 border border-gray-400 hover:border-transparent px-3 rounded-md hover:bg-red-500 text-black hover:text-white text-center">
+                Shop
+              </button> 
+             
             </div>
 
             <div>
@@ -111,13 +142,19 @@ export default function Sales() {
                 width={400}
                 height={100}
               />{" "}
-              <p className="mt-1 text-center text-sm">Kurti</p>
-              <p className="mt-2 text-center">Text Below Image 1</p>
+              <div className="flex gap-4 ">
+              <del className="mt-2 text-center text">$81</del>
+              <p className="mt-2 text-center font-bold">${parseInt(81/2)}</p>
+              </div>
+              <button className="border border-gray-400  hover:border-transparent px-3 rounded-md hover:bg-red-500 text-black hover:text-white ml-2">
+                Shop
+              </button>
+           
             </div>
           </div>
         </div>
 
-        <div className="px-12 ">
+        <div className="px-12 text-center">
           <Image
            
             src="https://images.unsplash.com/photo-1710868941935-4ecf76ce8a6d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -126,6 +163,15 @@ export default function Sales() {
             height={500}
             className="object-cover rounded-md hover:blur-sm"
           />
+         
+           <div className="flex gap-4 ">
+              <del className="mt-2 text-center text ml-32 " >$112</del>
+              <p className="mt-2 text-center font-bold">${parseInt(112/2) }</p>
+              </div>
+              <button className="border border-gray-400  hover:border-transparent px-3 rounded-md hover:bg-red-500 text-black hover:text-white ml-2">
+                Shop
+              </button>
+              
         </div>
       </div>
     </>
