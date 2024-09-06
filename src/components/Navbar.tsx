@@ -145,7 +145,18 @@ const Navbar = () => {
               >
                 CATEGORIES
               </ScrollLink>
-              <Link className="navbar__link relative underline:transition-pink-800" href="#">SELL OFFER</Link>
+
+              <ScrollLink
+                activeClass="active"
+                to="SalesOffer"
+                spy={true}
+                offset={-50}
+                smooth={true}
+                duration={700}
+                className="navbar__link relative underline:transition-pink-800 cursor-pointer"
+              >
+                SALES OFFER
+              </ScrollLink>
 
               <ScrollLink
                 activeClass="active"

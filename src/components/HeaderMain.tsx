@@ -8,6 +8,7 @@ import { FaHeartCirclePlus } from "react-icons/fa6";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import logo1 from '../../public/logo1 (2).png'
 import { useState,useEffect } from "react";
+import {fade} from "@/variants"
 
 const HeaderMain = () => {
 const placeholder = ['Men','Woman','Boys','Girls']
@@ -23,8 +24,8 @@ useEffect (()=> {
 
   return (
     <>
-      <div>
-        <div className="border-b border-gray-300 px-12 ">
+      <div> 
+        <div className="dark:bg-dark border-b border-gray-300 px-12 ">
           <div className="container sm:flex justify-between items-center">
             <div className="flex justify-center sm:justify-start font-bold text-4xl text-center pb-4 sm:pb-0 text-blackish">
               <Image
