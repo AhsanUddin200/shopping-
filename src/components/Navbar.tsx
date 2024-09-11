@@ -1,17 +1,163 @@
-"use client"
-import Link from 'next/link'
-import React from 'react'
-import { useState, useEffect } from 'react';
+"use client";
+import Link from 'next/link';
+import React, { useState } from 'react';
 import { Link as ScrollLink } from "react-scroll";
 import { motion } from 'framer-motion';
+import { PiHamburger } from "react-icons/pi";
 
 import { fade } from '@/variants';
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       <div>
-        <div className='hidden lg:block dark:bg-dark '>
+        <div className='lg:hidden dark:bg-dark '>
+          <div className='container flex justify-between items-center py-5 px-4'>
+            
+            {/* <button 
+              onClick={() => setMenuOpen(!menuOpen)} 
+              className='text-blackish dark:text-white'
+            >
+              <svg 
+                className={`w-6 h-6 transition-transform duration-200 ${menuOpen ? 'rotate-90' : ''}`}
+                fill="none" 
+                stroke="currentColor"   
+                viewBox="0 0 24 24" 
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+            </button> */}
+
+<button 
+      onClick={() => setMenuOpen(!menuOpen)} 
+      className='text-black dark:text-white'
+    >
+      <PiHamburger 
+        className={`w-6 h-6 transition-transform duration-200 ${menuOpen ? 'rotate-90' : ''}`}
+      />
+    </button>
+            
+          </div>
+          {menuOpen && (
+            <div className='bg-white dark:bg-dark'>
+              <motion.div
+                variants={fade({ direction: "down", delay: 0.3 })}
+                initial="hidden"
+                animate="show"
+                className='flex flex-col items-center py-5 text-blackish dark:text-white'
+              >
+                <ScrollLink
+                  activeClass="active"
+                  to="Banner"
+                  spy={true}
+                  offset={-50}
+                  smooth={true}
+                  duration={500}
+                  className="navbar__link py-2 cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  HOME
+                </ScrollLink>
+
+                <ScrollLink
+                  activeClass="active"
+                  to="Products1"
+                  spy={true}
+                  offset={-50}
+                  smooth={true}
+                  duration={700}
+                  className="navbar__link py-2 cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  MEN&apos;S
+                </ScrollLink>
+
+                <ScrollLink
+                  activeClass="active"
+                  to="Products2"
+                  spy={true}
+                  offset={-50}
+                  smooth={true}
+                  duration={800}
+                  className="navbar__link py-2 cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  WOMEN&apos;S
+                </ScrollLink>
+
+                <ScrollLink
+                  activeClass="active"
+                  to="Products3"
+                  spy={true}
+                  offset={-50}
+                  smooth={true}
+                  duration={800}
+                  className="navbar__link py-2 cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  KIDS
+                </ScrollLink>
+
+                <ScrollLink
+                  activeClass="active"
+                  to="Products4"
+                  spy={true}
+                  offset={-50}
+                  smooth={true}
+                  duration={900}
+                  className="navbar__link py-2 cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  GIRLS
+                </ScrollLink>
+
+                <ScrollLink
+                  activeClass="active"
+                  to="Products"
+                  spy={true}
+                  offset={-50}
+                  smooth={true}
+                  duration={700}
+                  className="navbar__link py-2 cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  CATEGORIES
+                </ScrollLink>
+
+                <ScrollLink
+                  activeClass="active"
+                  to="SalesOffer"
+                  spy={true}
+                  offset={-50}
+                  smooth={true}
+                  duration={700}
+                  className="navbar__link py-2 cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  SALES OFFER
+                </ScrollLink>
+
+                <ScrollLink
+                  activeClass="active"
+                  to="Testimonail"
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={900}
+                  className="navbar__link py-2 cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  TESTIMONIALS
+                </ScrollLink>
+              </motion.div>
+            </div>
+          )}
+        </div>
+
+        <div className='hidden lg:block dark:bg-dark'>
           <div className='container'>
             <motion.div
               variants={fade({ direction: "down", delay: 0.3 })}
@@ -167,14 +313,14 @@ const Navbar = () => {
                 duration={900}
                 className="navbar__link relative underline:transition-pink-800 cursor-pointer dark:text-white"
               >
-                TESTIMONAILS
+                TESTIMONIALS
               </ScrollLink>
             </motion.div>
           </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
