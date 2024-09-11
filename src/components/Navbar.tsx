@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <>
       <div>
-        <div className='hidden lg:block'>
+        <div className='hidden lg:block dark:bg-dark '>
           <div className='container'>
             <motion.div
               variants={fade({ direction: "down", delay: 0.3 })}
@@ -27,7 +27,7 @@ const Navbar = () => {
                 offset={-50}
                 smooth={true}
                 duration={500}
-                className="navbar__link relative underline:transition-pink-800 cursor-pointer"
+                className="navbar__link relative underline:transition-pink-800 cursor-pointer dark:text-white"
               >
                 HOME
               </ScrollLink>
@@ -40,7 +40,7 @@ const Navbar = () => {
                   offset={-50}
                   smooth={true}
                   duration={700}
-                  className="navbar__link relative underline:transition-pink-800 cursor-pointer"
+                  className="navbar__link relative underline:transition-pink-800 cursor-pointer dark:text-white"
                 >
                   MEN&apos;S
                 </ScrollLink>
@@ -79,7 +79,7 @@ const Navbar = () => {
                   offset={-50}
                   smooth={true}
                   duration={800}
-                  className="navbar__link relative underline:transition-pink-800 cursor-pointer"
+                  className="navbar__link relative underline:transition-pink-800 cursor-pointer dark:text-white"
                 >
                   WOMEN&apos;S
                 </ScrollLink>
@@ -117,7 +117,7 @@ const Navbar = () => {
                 offset={-50}
                 smooth={true}
                 duration={800}
-                className="navbar__link relative underline:transition-pink-800 cursor-pointer"
+                className="navbar__link relative underline:transition-pink-800 cursor-pointer dark:text-white"
               >
                 KIDS
               </ScrollLink>
@@ -129,7 +129,7 @@ const Navbar = () => {
                 offset={-50}
                 smooth={true}
                 duration={900}
-                className="navbar__link relative underline:transition-pink-800 cursor-pointer"
+                className="navbar__link relative underline:transition-pink-800 cursor-pointer dark:text-white"
               >
                 GIRLS
               </ScrollLink>
@@ -141,7 +141,7 @@ const Navbar = () => {
                 offset={-50}
                 smooth={true}
                 duration={700}
-                className="navbar__link relative underline:transition-pink-800 cursor-pointer"
+                className="navbar__link relative underline:transition-pink-800 cursor-pointer dark:text-white"
               >
                 CATEGORIES
               </ScrollLink>
@@ -153,7 +153,7 @@ const Navbar = () => {
                 offset={-50}
                 smooth={true}
                 duration={700}
-                className="navbar__link relative underline:transition-pink-800 cursor-pointer"
+                className="navbar__link relative underline:transition-pink-800 cursor-pointer dark:text-white"
               >
                 SALES OFFER
               </ScrollLink>
@@ -165,7 +165,7 @@ const Navbar = () => {
                 smooth={true}
                 offset={-50}
                 duration={900}
-                className="navbar__link relative underline:transition-pink-800 cursor-pointer"
+                className="navbar__link relative underline:transition-pink-800 cursor-pointer dark:text-white"
               >
                 TESTIMONAILS
               </ScrollLink>

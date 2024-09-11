@@ -148,9 +148,8 @@ const Products = () => {
   const girlsProducts = itemsdata.filter((item) => item.gender === "girls");
 
   return (
-    <div 
-   
-    id="Products" className="container pt-16">
+    <div id="Products" className="pt-16 dark:bg-dark w-full min-h-screen">
+
       <div className="font-serif text-3xl pb-4 text-gray-400 text-center">
         Our Products
       </div>

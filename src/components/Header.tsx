@@ -15,12 +15,12 @@ const Header = () => {
         <div
        
         
-        className="dark:bg-dark border-b border-gray-400 hidden sm:block">
+        className="dark:bg-dark border-b border-gray-400 hidden sm:block dark:text-white ">
           <div className="container py-4">
             <div className="flex justify-between items-center">
               <div className="flex gap-5">
                 <select
-                  className="text-gray-600 text-[14px] w-[70px]"
+                  className="text-gray-600 text-[14px] w-[70px] rounded-md"
                   name="currency"
                 >
                   <option value="$ USD">$ USD</option>
@@ -36,7 +36,7 @@ const Header = () => {
                 </select>
 
                 <select
-                  className="text-gray-600 text-[14px] w-[80px]"
+                  className="text-gray-600 text-[14px] w-[80px] rounded-md"
                   name="Language"
                 >
                   <option value="English">English</option>
@@ -54,7 +54,7 @@ const Header = () => {
                   <option value="Hindi">Hindi</option>
                 </select>
               </div>
-              <div className="text-gray-600 text-[14px]">
+              <div className="text-gray-600 text-[14px] dark:text-white ">
                 <b>GAALA SALE</b> THIS WEEKEND ORDER OVER NOW!!
               </div>
               <motion.div

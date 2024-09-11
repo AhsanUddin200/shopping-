@@ -1,10 +1,9 @@
-"use client"
+"use client";
 import React from 'react';
 import Slider from 'react-slick';
 import Slide from './Slide';
-import { once } from 'events';
 import { fade } from '@/variants';
-import {motion} from "framer-motion"
+import { motion } from 'framer-motion';
 
 const Banner: React.FC = () => {
   const settings = {
@@ -13,7 +12,7 @@ const Banner: React.FC = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     pauseOnHover: false,
-    autoplay: true
+    autoplay: true,
   };
 
   const Data = [
@@ -22,41 +21,41 @@ const Banner: React.FC = () => {
       img: "/banner1.jpg",
       Title: "First Banner",
       mainTitle: "LATEST FASHION SHOW",
-      Price: "$9"
+      Price: "$9",
     },
     {
       id: 1,
       img: "/banner2.png",
       Title: "New Trends",
       mainTitle: "SUMMER STYLE",
-      Price: "$9"
+      Price: "$9",
     },
-    
     {
       id: 2,
       img: "/banner3.png",
       Title: "First Banner",
       mainTitle: "LATEST FASHION SHOW",
-      Price: "$9"
+      Price: "$9",
     },
     {
       id: 3,
       img: "/banner4.JPG",
       Title: "New Arrival",
       mainTitle: "Limited Edition",
-      Price: "$9"
+      Price: "$9",
     },
-    
   ];
 
   return (
     <motion.div
-    variants={fade({direction:"up", delay:0.7})}
-    initial="hidden"
-    whileInView={"show"}
-    viewport={{once: false, amount: 0.5}}
-     id="Banner"  className='container pt-6 lg:pt-0'>
-      <Slider {...settings}>
+      variants={fade({ direction: "up", delay: 0.7 })}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.5 }}
+      id="Banner"
+      className="w-full h-screen pt-6 lg:pt-0 dark:bg-dark"
+    >
+      <Slider {...settings} className="w-full h-full">
         {Data.map((item) => (
           <Slide
             key={item.id}

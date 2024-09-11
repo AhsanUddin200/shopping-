@@ -18,10 +18,10 @@ const Slide: React.FC<PropsType> = ({ img, title, mainTitle, price }) => {
         {/* <h3 className='text-blackish text-[12px] md:text-[20px] lg:text-[30px] font-bold leading-3' >{mainTitle}</h3> */}
         {/* <p>{price}</p> */}
 
-        <div className='bg-yellow-300 sm:mb-4 md:mt-24 lg:mt-36 text-white text-[13px] md:text-[15px] p-1 sm:p-3 rounded-lg inline-block cursor-pointer hover:bg-red-800'>
+        {/* <div className='bg-yellow-300 sm:mb-4 md:mt-24 lg:mt-72 text-white text-[13px] md:text-[15px] p-1 sm:p-3 rounded-lg inline-block cursor-pointer hover:bg-red-800'>
           Shop Now
-        </div>
-      </div>
+        </div> */}
+      </div>  
       <div className='flex justify-center items-center'>
         <Image 
           src={img} 
