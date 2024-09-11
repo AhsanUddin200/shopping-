@@ -53,9 +53,9 @@ const Banner: React.FC = () => {
       whileInView={"show"}
       viewport={{ once: false, amount: 0.5 }}
       id="Banner"
-      className="w-full h-screen pt-6 lg:pt-0 dark:bg-dark"
+      className="w-full  pt-6 lg:pt-0 dark:bg-dark"
     >
-      <Slider {...settings} className="w-full h-full">
+      <Slider {...settings} className="w-full ">
         {Data.map((item) => (
           <Slide
             key={item.id}

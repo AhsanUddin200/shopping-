@@ -148,12 +148,12 @@ const Products = () => {
   const girlsProducts = itemsdata.filter((item) => item.gender === "girls");
 
   return (
-    <div id="Products" className="pt-16 dark:bg-dark w-full min-h-screen">
+    <div id="Products" className=" pt-0 sm:pt-16 dark:bg-dark w-full min-h-screen">
 
-      <div className="font-serif text-3xl pb-4 text-gray-400 text-center">
+      <div className="font-serif text-3xl pb-4 text-gray-400 text-center dark:text-white">
         Our Products
       </div>
-      <div className="text-center text-sm">FOR MEN</div>
+      <div className="text-center text-sm dark:text-white">FOR MEN</div>
       <div
          
       
@@ -169,7 +169,7 @@ const Products = () => {
           />
         ))}
       </div>
-      <div className="text-center text-sm mt-10">FOR WOMEN</div>
+      <div className="text-center text-sm mt-10 dark:text-white">FOR WOMEN</div>
       <div id="Products2" className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
         {womenProducts.map((item, index) => (
           <ProductCard
@@ -182,8 +182,8 @@ const Products = () => {
           />
         ))}
       </div>
-      <div className="text-center text-sm mt-10">FOR BOYS</div>
-      <div id="Products3" className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
+      <div className="text-center text-sm mt-10 dark:text-white">FOR BOYS</div>
+      <div id="Products3" className="grid grid-cols-1 dark:text-white place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
         {kidsProducts.map((item, index) => (
           <ProductCard
             key={index}
@@ -195,8 +195,8 @@ const Products = () => {
           />
         ))}
       </div>
-      <div className="text-center text-sm mt-10">FOR GIRLS</div>
-      <div id="Products4" className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 mb-8">
+      <div className="text-center text-sm mt-10 dark:text-white">FOR GIRLS</div>
+      <div id="Products4" className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-20 px-4 mt-6 ">
         {girlsProducts.map((item, index) => (
           <ProductCard
             key={index}

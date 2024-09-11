@@ -21,8 +21,8 @@ const Slide: React.FC<PropsType> = ({ img, title, mainTitle, price }) => {
         {/* <div className='bg-yellow-300 sm:mb-4 md:mt-24 lg:mt-72 text-white text-[13px] md:text-[15px] p-1 sm:p-3 rounded-lg inline-block cursor-pointer hover:bg-red-800'>
           Shop Now
         </div> */}
-      </div>  
-      <div className='flex justify-center items-center'>
+      </div>
+      <div className='flex justify-center items-center '>
         <Image 
           src={img} 
           alt={title} 

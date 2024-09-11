@@ -12,15 +12,15 @@ const Footer = () => {
   return (
     <>
       <div className="w-full h-2/5 ">
-        <div className="px-24 flex flex-col sm:flex-row bg-black text-white gap-24">
+        <div className="px-24 flex flex-col sm:flex-row bg-black text-white gap-24 dark:bg-dark">
           <motion.div
             variants={fade({ direction: "right", delay: 0.3 })}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.2 }}
-            className="mt-5 space-y-4 mb-4"
+            className=" space-y-4 mb-5"
           >
-            <h1 className="font-bold text-xl underline decoration-yellow-600">
+            <h1 className="font-bold text-xl underline decoration-yellow-600 ">
               Company
             </h1>
             <div className="font-mono space-y-4">
@@ -50,7 +50,7 @@ const Footer = () => {
             viewport={{ once: false, amount: 0.2 }}
             className="flex flex-col sm:flex-row bg-black text-white"
           >
-            <div className="mt-5 space-y-4 mb-4">
+            <div className=" space-y-4   dark:bg-dark">
               <h1 className="font-bold text-xl underline decoration-yellow-600">
                 Company
               </h1>
@@ -71,7 +71,7 @@ const Footer = () => {
             viewport={{ once: false, amount: 0.2 }}
             className="flex flex-col sm:flex-row bg-black text-white gap-24"
           >
-            <div className="mt-5 space-y-4 mb-4">
+            <div className=" space-y-4  dark:bg-dark">
               <h1 className="font-bold text-xl underline decoration-yellow-600">
                 Categories
               </h1>
@@ -92,7 +92,7 @@ const Footer = () => {
             viewport={{ once: false, amount: 0.2 }}
             className="flex flex-col sm:flex-row bg-black text-white gap-24"
           >
-            <div className="mt-5 space-y-4 mb-4">
+            <div className="space-y-4 dark:bg-dark">
               <h1 className="font-bold text-xl inline-block border-b-2 border-yellow-600">
                 Help
               </h1>
@@ -112,11 +112,11 @@ const Footer = () => {
             viewport={{ once: false, amount: 0.2 }}
             className="flex flex-col sm:flex-row bg-black text-white"
           >
-            <div className="mt-5 ">
+            <div className=" dark:bg-dark">
               <h1 className="font-bold text-xl inline-block border-b-2 border-yellow-600">
                 Reach Us
               </h1>
-              <div className="flex gap-5 mt-4">
+              <div className="flex gap-5 mt-4 dark:bg-dark">
                 <ImWhatsapp className="scale-125" />
                 <CgInstagram className="scale-125" />
                 <SiDiscord className="scale-125" />
