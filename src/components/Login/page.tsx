@@ -1,5 +1,6 @@
 import React from "react";
-import { FaFacebookF, FaLinkedinIn, FaGoogle } from "react-icons/fa6";
+import { FaFacebookF, FaLinkedinIn, FaGoogle, FaRegEnvelope } from "react-icons/fa6";
+import { MdLockOutline } from "react-icons/md";
 export default function Login() {
   return (
     <>
@@ -24,7 +25,23 @@ export default function Login() {
                  <a href="#" className="border-2 border-gray-700  p-3 mx-1 rounded-full"> 
                 <FaGoogle className="text-sm"/>
                  </a>
+
+                
             </div>
+            <p className="text-gray-400 my-3 font-serif">or use email account</p>
+            <div className="flex flex-col items-center">
+              <div className="bg-gray-100 w-64 p-2 flex items-center gap-2 mb-3">
+                <FaRegEnvelope className="text-gray-400"/>
+                <input type="email" name="email" placeholder="Email" className="bg-gray-100 outline-none text-sm flex-1" />
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <div className="bg-gray-100 w-64 p-2 flex items-center gap-2">
+                <MdLockOutline className="text-gray-400"/>
+                <input type="password" name="password" placeholder="password" className="bg-gray-100 outline-none text-sm flex-1" />
+              </div>
+            </div> 
           </div>
         </div>
 
