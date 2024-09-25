@@ -100,10 +100,10 @@ export default function SignUp() {
           </div>
           <div
   className="w-2/5 bg-gray-600 text-white rounded-tr-2xl rounded-br-2xl py-36 px-12 bg-cover bg-center "
-  style={{ backgroundImage: "url('https://plus.unsplash.com/premium_photo-1673320566699-de2dd80f2d0f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')", }}
+  style={{ backgroundImage: "url('https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')", }}
 >
   
-   <div className="text-xl font-bold font-serif  text-gray-900 mb-1">Fashion is bought, style is made.</div>
+   <div className="text-xl font-bold font-serif  text-white mb-1">Fashion is bought, style is made.</div>
   <div className="border-2 w-10 border-white inline-block mb-20"></div>
   <div className="mt-auto">
     
