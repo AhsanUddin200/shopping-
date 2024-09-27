@@ -7,8 +7,8 @@ import {
 } from "react-icons/fa6";
 import { MdLockOutline } from "react-icons/md";
 import Image from "next/image";
-import logo1 from '../../public/logo1 (2).png'
-import Link from 'next/link'
+import logo1 from "../../../public/logo1 (2).png";
+import Link from "next/link";
 
 export default function SignUp() {
   return (
@@ -16,17 +16,15 @@ export default function SignUp() {
       <div className="flex flex-col items-center w-full flex-1 px-20 text-center bg-gray-800">
         <div className="bg-white rounded-2xl shadow-3xl flex w-2/3 max-w-3xl">
           <div className="w-3/5 p-4 mt-5">
-           
             <div className="text-left font-bold">
-             <div className="flex justify-center items-center">
-              <Image
-                src={logo1}
-                alt="Description of the image"
-             
-                className=" w-[90px]  "
-              />
+              <div className="flex justify-center items-center">
+                <Image
+                  src={logo1}
+                  alt="Description of the image"
+                  className=" w-[90px]  "
+                />
               </div>
-              
+
               <div className="py-1 text-center">
                 <h1 className="text-3xl font-bold text-gray-600 mb-2 ">
                   Sign Into Account
@@ -99,27 +97,30 @@ export default function SignUp() {
             </div>
           </div>
           <div
-  className="w-2/5 bg-gray-600 text-white rounded-tr-2xl rounded-br-2xl py-36 px-12 bg-cover bg-center "
-  style={{ backgroundImage: "url('https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')", }}
->
-  
-   <div className="text-xl font-bold font-serif  text-white mb-1">Fashion is bought, style is made.</div>
-  <div className="border-2 w-10 border-white inline-block mb-20"></div>
-  <div className="mt-auto">
-    
-  <p className="mb-10 text-sm font-extrabold ">
-    Fill Up The Personal Information And Start Journey With Us
-  </p>
-  <div>
-  <Link href="/SignIn" className="border-2 border-white rounded-full px-12 md:px-5 py-2 font-semibold hover:font-extrabold hover:bg-white hover:text-black">
-                SignIn
-              </Link> 
-    </div>
-  
-  
-  </div>
-</div>
-
+            className="w-2/5 bg-gray-600 text-white rounded-tr-2xl rounded-br-2xl py-36 px-12 bg-cover bg-center "
+            style={{
+              backgroundImage:
+                "url('https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+            }}
+          >
+            <div className="text-xl font-bold font-serif  text-white mb-1">
+              Fashion is bought, style is made.
+            </div>
+            <div className="border-2 w-10 border-white inline-block mb-20"></div>
+            <div className="mt-auto">
+              <p className="mb-10 text-sm font-extrabold ">
+                Fill Up The Personal Information And Start Journey With Us
+              </p>
+              <div>
+                <Link
+                  href="/SignIn"
+                  className="border-2 border-white rounded-full px-12 md:px-5 py-2 font-semibold hover:font-extrabold hover:bg-white hover:text-black"
+                >
+                  SignIn
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

@@ -1,7 +1,9 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import { AiFillStar } from "react-icons/ai";
 import { AiOutlineStar } from "react-icons/ai";
+import { useRouter } from 'next/navigation';
 
 interface PropsType {
   img: string;
@@ -79,9 +81,14 @@ const ProductCard: React.FC<PropsType> = ({
   rating,
   price,
 }) => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/signup'); // Navigate to the signup page
+  };
   return (
-    <div className="text-gray-600 text-center text-xl mb-12 ">
-      <div className="font-bold text-2xl mb-3 dark:text-white">{title}</div>
+    <div className="text-gray-600 text-center text-xl ">
+      <div className="font-bold text-2xl mb-3">{title}</div>
 
       <div className="px-4 border border-gray-400 rounded-lg max-w-[800px]  ">
       {/* */}
@@ -93,16 +100,19 @@ const ProductCard: React.FC<PropsType> = ({
             height={300}
             alt={title}
           />
-          <button className="font-semibold text-lg bg-red-600 rounded-md mt-4 mb-4 px-4 text-white hover:text-black hover:bg-white">
-            Shop Now{" "}
-          </button>
+          <button
+    className="font-semibold text-lg bg-red-600 rounded-md mt-4 mb-4 px-4 text-white hover:text-black hover:bg-white"
+    onClick={handleClick} // Correctly placed onClick prop
+  >
+    Click Me {/* Button text */}
+  </button>
         </div>
         <div className="py-4 space-y-2 px-12">
-          <p className="text-gray-500 text-sm font-mono dark:text-white">{desc}</p>
-         <div className="dark:text-white px-12">{generateRating(rating)}</div>
-         <div className="font-semibold flex gap-4 dark:text-white px-12">
+          <p className="text-gray-500 text-sm font-mono">{desc}</p>
+         <div className="">{generateRating(rating)}</div>
+         <div className="font-semibold flex gap-4 ">
           ${price}
-          <del className="text-gray-00 font-sm dark:text-white">${parseInt(price) + 7}.00</del>
+          <del className="text-gray-00 font-sm">${parseInt(price) + 7}.00</del>
          </div>
         </div>
       </div>
