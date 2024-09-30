@@ -102,9 +102,9 @@ const ProductCard: React.FC<PropsType> = ({
           />
           <button
     className="font-semibold text-lg bg-red-600 rounded-md mt-4 mb-4 px-4 text-white hover:text-black hover:bg-white"
-    onClick={handleClick} // Correctly placed onClick prop
+    onClick={handleClick} 
   >
-    Click Me {/* Button text */}
+    Shop
   </button>
         </div>
         <div className="py-4 space-y-2 px-12">

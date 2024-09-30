@@ -17,14 +17,11 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>)
- {
+}>) {
   const pathname = usePathname();
   const isHome = pathname === "/";
-  const isSignIn = pathname === "/SignIn"; 
+  const isAuthPage = pathname === "/SignIn" || pathname === "/signup"; 
   const [isLoading, setIsLoading] = useState(isHome);
-
-
 
   return (
     <html lang="en">
@@ -33,7 +30,7 @@ export default function RootLayout({
           <SplashScreen finishLoading={() => setIsLoading(false)} />
         ) : (
           <>
-            {!isSignIn && (
+            {!isAuthPage && (
               <>
                 <Header />
                 <HeaderMain />
@@ -41,7 +38,7 @@ export default function RootLayout({
               </>
             )}
             {children}
-            {!isSignIn && <Footer />}
+            {!isAuthPage && <Footer />}
           </>
         )}
       </body>
