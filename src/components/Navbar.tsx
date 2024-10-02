@@ -1,21 +1,26 @@
 "use client";
-import Link from 'next/link';
-import React, { useState } from 'react';
+import Link from "next/link";
+import React, { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import { PiHamburger } from "react-icons/pi";
+import { useRouter } from "next/navigation";
 
-import { fade } from '@/variants';
+import { fade } from "@/variants";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
+
+  const gentsClick = () => {
+    router.push("/gentsk");
+  };
 
   return (
     <>
       <div>
-        <div className='lg:hidden dark:bg-dark '>
-          <div className='container flex justify-between items-center py-5 px-4'>
-            
+        <div className="lg:hidden dark:bg-dark ">
+          <div className="container flex justify-between items-center py-5 px-4">
             {/* <button 
               onClick={() => setMenuOpen(!menuOpen)} 
               className='text-blackish dark:text-white'
@@ -31,23 +36,24 @@ const Navbar = () => {
               </svg>
             </button> */}
 
-<button 
-      onClick={() => setMenuOpen(!menuOpen)} 
-      className='text-black dark:text-white'
-    >
-      <PiHamburger 
-        className={`w-6 h-6 transition-transform duration-200 ${menuOpen ? 'rotate-90' : ''}`}
-      />
-    </button>
-            
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="text-black dark:text-white"
+            >
+              <PiHamburger
+                className={`w-6 h-6 transition-transform duration-200 ${
+                  menuOpen ? "rotate-90" : ""
+                }`}
+              />
+            </button>
           </div>
           {menuOpen && (
-            <div className='bg-white dark:bg-dark'>
+            <div className="bg-white dark:bg-dark">
               <motion.div
                 variants={fade({ direction: "down", delay: 0.3 })}
                 initial="hidden"
                 animate="show"
-                className='flex flex-col items-center py-5 text-blackish dark:text-white'
+                className="flex flex-col items-center py-5 text-blackish dark:text-white"
               >
                 <ScrollLink
                   activeClass="active"
@@ -157,14 +163,14 @@ const Navbar = () => {
           )}
         </div>
 
-        <div className='hidden lg:block dark:bg-dark'>
-          <div className='container'>
+        <div className="hidden lg:block dark:bg-dark">
+          <div className="container">
             <motion.div
               variants={fade({ direction: "down", delay: 0.3 })}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.2 }}
-              className='flex w-fit gap-12 mx-auto font-semibold py-5 text-blackish'
+              className="flex w-fit gap-12 mx-auto font-semibold py-5 text-blackish"
             >
               <ScrollLink
                 activeClass="active"
@@ -191,25 +197,44 @@ const Navbar = () => {
                   MEN&apos;S
                 </ScrollLink>
                 <div className="absolute left-0 z-10 hidden group-hover:block mt-1 font-normal bg-white divide-y divide-gray-100 rounded-xl shadow w-32 dark:bg-gray-200 dark:divide-gray-900">
-                  <ul className="py-2 text-sm text-black dark:text-gray-900" aria-labelledby="dropdownLargeButton">
+                  <ul
+                    className="py-2 text-sm text-black dark:text-gray-900"
+                    aria-labelledby="dropdownLargeButton"
+                  >
                     <li>
-                      <a href="#" className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        onClick={(e) => {
+                          e.preventDefault(); // Prevent the default link behavior
+                          gentsClick();
+                        }}
+                      >
                         Shalwar Qameez
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
                         Pants
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
                         Shirt
                       </a>
                     </li>
 
                     <li>
-                      <a href="#" className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
                         T-Shirt
                       </a>
                     </li>
@@ -230,25 +255,40 @@ const Navbar = () => {
                   WOMEN&apos;S
                 </ScrollLink>
                 <div className="absolute left-0 z-10 hidden group-hover:block mt-1 font-normal bg-white divide-y divide-gray-100 rounded-xl shadow w-32 dark:bg-gray-200 dark:divide-gray-900">
-                  <ul className="py-2 text-sm text-black dark:text-gray-900" aria-labelledby="dropdownLargeButton">
+                  <ul
+                    className="py-2 text-sm text-black dark:text-gray-900"
+                    aria-labelledby="dropdownLargeButton"
+                  >
                     <li>
-                      <a href="#" className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
                         Kurta Paijama
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
                         Saree
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
                         Burqa
                       </a>
                     </li>
 
                     <li>
-                      <a href="#" className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
                         T-Shirt
                       </a>
                     </li>
