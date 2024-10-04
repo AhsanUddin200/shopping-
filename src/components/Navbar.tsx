@@ -16,6 +16,10 @@ const Navbar = () => {
     router.push("/gentsk");
   };
 
+  const gentsClick1 = () => {
+    router.push("/gentpant");
+  };
+
   return (
     <>
       <div>
@@ -214,9 +218,13 @@ const Navbar = () => {
                       </a>
                     </li>
                     <li>
-                      <a
+                    <a
                         href="#"
                         className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        onClick={(e) => {
+                          e.preventDefault(); // Prevent the default link behavior
+                          gentsClick1();
+                        }}
                       >
                         Pants
                       </a>
