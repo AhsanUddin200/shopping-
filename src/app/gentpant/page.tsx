@@ -1,93 +1,100 @@
 "use client"
 import React, { useState } from 'react';
 
-const imageItems = [
+type ImageItem = {
+  url: string;
+  price: number;
+  piecesLeft: number;
+  piecesSold: number;
+  category: string;
+};
+
+const imageItems: ImageItem[] = [
   {
-    url: 'https://bonobos-prod-s3.imgix.net/products/343835/original/PANT_CHINO-PANT_BPT10629S1050G_2_hover.jpg?1718381218=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50', // Replace with valid sequential URL
+    url: 'https://bonobos-prod-s3.imgix.net/products/343835/original/PANT_CHINO-PANT_BPT10629S1050G_2_hover.jpg?1718381218=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50',
     price: 12,
     piecesLeft: 10,
     piecesSold: 5,
     category: 'traditional',
   },
   {
-    url: 'https://bonobos-prod-s3.imgix.net/products/342194/original/PANT_CHINO-PANT_BPT10629S1052G_2_hover.jpg?1716407733=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50', // Replace with valid sequential URL
+    url: 'https://bonobos-prod-s3.imgix.net/products/342194/original/PANT_CHINO-PANT_BPT10629S1052G_2_hover.jpg?1716407733=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50',
     price: 13,
     piecesLeft: 8,
     piecesSold: 7,
     category: 'modern',
   },
   {
-    url: 'https://bonobos-prod-s3.imgix.net/products/343234/original/DENIM_5-POCKET-JEAN_BDB05261S1113W_40_outfitter.jpg?1716479789=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50', // Replace with valid sequential URL
+    url: 'https://bonobos-prod-s3.imgix.net/products/343234/original/DENIM_5-POCKET-JEAN_BDB05261S1113W_40_outfitter.jpg?1716479789=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50',
     price: 14,
     piecesLeft: 5,
     piecesSold: 2,
     category: 'traditional',
   },
   {
-    url: 'https://bonobos-prod-s3.imgix.net/products/332450/original/DENIM_DENIM-JEAN_BDB11737SG5453_40_outfitter.jpg?1707777787=&auto=format%2Ccompress&q=75&fit=clip&cs=srgb&ixlib=react-8.6.1&w=285&dpr=1', // Replace with valid sequential URL
+    url: 'https://bonobos-prod-s3.imgix.net/products/332450/original/DENIM_DENIM-JEAN_BDB11737SG5453_40_outfitter.jpg?1707777787=&auto=format%2Ccompress&q=75&fit=clip&cs=srgb&ixlib=react-8.6.1&w=285&dpr=1',
     price: 15,
     piecesLeft: 12,
     piecesSold: 4,
     category: 'traditional',
   },
   {
-    url: 'https://bonobos-prod-s3.imgix.net/products/342931/original/PANT_CHINO-PANT_BWB00809SGY431_3_category.jpg?1716410254=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50', // Replace with valid sequential URL
+    url: 'https://bonobos-prod-s3.imgix.net/products/342931/original/PANT_CHINO-PANT_BWB00809SGY431_3_category.jpg?1716410254=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50',
     price: 16,
     piecesLeft: 7,
     piecesSold: 3,
     category: 'modern',
   },
   {
-    url: 'https://bonobos-prod-s3.imgix.net/products/325825/original/PANT_CHINO-PANT_BPT11501NN4651_3_category.jpg?1695213556=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50', // Replace with valid sequential URL
+    url: 'https://bonobos-prod-s3.imgix.net/products/325825/original/PANT_CHINO-PANT_BPT11501NN4651_3_category.jpg?1695213556=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50',
     price: 17,
     piecesLeft: 9,
     piecesSold: 1,
     category: 'traditional',
   },
   {
-    url: 'https://bonobos-prod-s3.imgix.net/products/342201/original/PANT_CHINO-PANT_BPT10629S1091B_2_hover.jpg?1716407759=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50', // Replace with valid sequential URL
+    url: 'https://bonobos-prod-s3.imgix.net/products/342201/original/PANT_CHINO-PANT_BPT10629S1091B_2_hover.jpg?1716407759=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50',
     price: 12,
     piecesLeft: 4,
     piecesSold: 6,
     category: 'modern',
   },
   {
-    url: 'https://bonobos-prod-s3.imgix.net/products/291014/original/PANT_CHINO-PANT_BPT10629S0001B_2_hover.jpg?1668745085=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50', // Replace with valid sequential URL
+    url: 'https://bonobos-prod-s3.imgix.net/products/291014/original/PANT_CHINO-PANT_BPT10629S0001B_2_hover.jpg?1668745085=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50',
     price: 13,
     piecesLeft: 3,
     piecesSold: 2,
     category: 'traditional',
   },
   {
-    url: 'https://bonobos-prod-s3.imgix.net/products/339436/original/DENIM_5-POCKET-JEAN_BDB11423S1220B_40_outfitter.jpg?1712771719=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50', // Replace with valid sequential URL
+    url: 'https://bonobos-prod-s3.imgix.net/products/339436/original/DENIM_5-POCKET-JEAN_BDB11423S1220B_40_outfitter.jpg?1712771719=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50',
     price: 14,
     piecesLeft: 1,
     piecesSold: 0,
     category: 'modern',
   },
   {
-    url: 'https://bonobos-prod-s3.imgix.net/products/343847/original/DENIM_DENIM-JEAN_BDB11264SN3290_40_outfitter.jpg?1718818802=&auto=format%2Ccompress&q=75&fit=clip&cs=srgb&ixlib=react-8.6.1&w=285&dpr=1', // Replace with valid sequential URL
+    url: 'https://bonobos-prod-s3.imgix.net/products/343847/original/DENIM_DENIM-JEAN_BDB11264SN3290_40_outfitter.jpg?1718818802=&auto=format%2Ccompress&q=75&fit=clip&cs=srgb&ixlib=react-8.6.1&w=285&dpr=1',
     price: 15,
     piecesLeft: 15,
     piecesSold: 5,
     category: 'traditional',
   },
   {
-    url: 'https://bonobos-prod-s3.imgix.net/products/345086/original/PANT_CHINO-PANT_BPT11567SB4943_3_category.jpg?1725493853=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50', // Replace with valid sequential URL
+    url: 'https://bonobos-prod-s3.imgix.net/products/345086/original/PANT_CHINO-PANT_BPT11567SB4943_3_category.jpg?1725493853=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50',
     price: 16,
     piecesLeft: 11,
     piecesSold: 8,
     category: 'modern',
   },
   {
-    url: 'https://bonobos-prod-s3.imgix.net/products/289162/original/PANT_CASUAL-PANT_BPT11117N1220B_3_category.jpg?1668724227=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50', // Replace with valid sequential URL
+    url: 'https://bonobos-prod-s3.imgix.net/products/289162/original/PANT_CASUAL-PANT_BPT11117N1220B_3_category.jpg?1668724227=&auto=compress%2Cformat&fit=clip&cs=srgb&w=768&fm=pjpg&q=50',
     price: 17,
     piecesLeft: 2,
     piecesSold: 1,
     category: 'traditional',
   },
 ];
-
 
 const categories = [
   { label: 'All', value: 'all' },
@@ -96,8 +103,8 @@ const categories = [
 ];
 
 export default function Page() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortOption, setSortOption] = useState('lowToHigh');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [sortOption, setSortOption] = useState<string>('lowToHigh');
 
   const filteredItems = imageItems
     .filter((item) => selectedCategory === 'all' || item.category === selectedCategory)
@@ -143,13 +150,10 @@ export default function Page() {
                 <p className="text-lg text-red-500">Discounted: ${discountedPrice}</p>
               </div>
               <div className="text-center mb-2">
-                <button className="bg-blue-500 text-white text-sm font-bold py-1 px-4 rounded hover:bg-blue-600">
-                  Shop
-                </button>
+                <button className="bg-blue-500 text-white text-lg font-bold py-2 px-4 rounded">Buy Now</button>
               </div>
-              <div className="text-center text-xs text-gray-600">
-                <p>Total Pieces Left: {item.piecesLeft}</p>
-                <p>Total Sold Pieces: {item.piecesSold}</p>
+              <div className="absolute top-2 right-2 bg-gray-800 text-white text-xs font-bold px-1 py-0.5 rounded">
+                {item.piecesLeft} left / {item.piecesSold} sold
               </div>
             </div>
           );
