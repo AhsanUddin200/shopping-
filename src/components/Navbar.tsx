@@ -23,6 +23,9 @@ const Navbar = () => {
   const gentsClick2 = () => {
     router.push("/gentshirt");
   };
+  const gentsClick3 = () => {
+    router.push("/genttshirt");
+  };
   return (
     <>
       <div>
@@ -243,16 +246,22 @@ const Navbar = () => {
                       >
                        
                       
-                        Shirt
+                       T-Shirt
                       </a>
                     </li>
 
                     <li>
-                      <a
+                    <a
                         href="#"
                         className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        onClick={(e) => {
+                          e.preventDefault(); // Prevent the default link behavior
+                          gentsClick3();
+                        }}
                       >
-                        T-Shirt
+                       
+                      
+                       Shirt
                       </a>
                     </li>
                   </ul>
