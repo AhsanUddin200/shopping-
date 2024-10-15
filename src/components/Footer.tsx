@@ -20,8 +20,8 @@ const Footer = () => {
             viewport={{ once: false, amount: 0.2 }}
             className=" space-y-4 mb-5"
           >
-            <h1 className="font-bold text-xl underline decoration-yellow-600 ">
-              Company
+            <h1 className="font-bold text-xl underline decoration-yellow-600 mt-5 ">
+            
             </h1>
             <div className="font-mono space-y-4">
               {/* <h2 className="font-thin text-lg">Mission Statment</h2> */}
@@ -51,10 +51,10 @@ const Footer = () => {
             className="flex flex-col sm:flex-row bg-black text-white"
           >
             <div className=" space-y-4   dark:bg-dark">
-              <h1 className="font-bold text-xl underline decoration-yellow-600">
+              <h1 className="font-bold text-xl underline decoration-yellow-600 mt-5" >
                 Company
               </h1>
-              <div className="font-mono space-y-4">
+              <div className="font-mono space-y-4 ">
                 <p>About Us</p>
                 <p>Services</p>
                 <p>Privacy </p>
@@ -72,7 +72,7 @@ const Footer = () => {
             className="flex flex-col sm:flex-row bg-black text-white gap-24"
           >
             <div className=" space-y-4  dark:bg-dark">
-              <h1 className="font-bold text-xl underline decoration-yellow-600">
+              <h1 className="font-bold text-xl underline decoration-yellow-600 mt-5">
                 Categories
               </h1>
               <div className="font-mono space-y-4">
@@ -93,7 +93,7 @@ const Footer = () => {
             className="flex flex-col sm:flex-row bg-black text-white gap-24"
           >
             <div className="space-y-4 dark:bg-dark">
-              <h1 className="font-bold text-xl inline-block border-b-2 border-yellow-600">
+              <h1 className="font-bold text-xl inline-block border-b-2 border-yellow-600 mt-5">
                 Help
               </h1>
               <div className="font-mono space-y-4">
@@ -113,7 +113,7 @@ const Footer = () => {
             className="flex flex-col sm:flex-row bg-black text-white"
           >
             <div className=" dark:bg-dark">
-              <h1 className="font-bold text-xl inline-block border-b-2 border-yellow-600">
+              <h1 className="font-bold text-xl inline-block border-b-2 border-yellow-600 mt-5">
                 Reach Us
               </h1>
               <div className="flex gap-5 mt-4 dark:bg-dark">
