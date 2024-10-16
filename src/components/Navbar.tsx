@@ -290,7 +290,7 @@ const Navbar = () => {
                         href="#"
                         className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                       >
-                        Kurta Paijama
+                        Unstitched
                       </a>
                     </li>
                     <li>
@@ -298,7 +298,7 @@ const Navbar = () => {
                         href="#"
                         className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                       >
-                        Saree
+                        Stitched
                       </a>
                     </li>
                     <li>
@@ -315,7 +315,16 @@ const Navbar = () => {
                         href="#"
                         className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                       >
-                        T-Shirt
+                        Mom & Baby
+                      </a>
+                    </li>
+
+                    <li>
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-sm font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                        Undergarment
                       </a>
                     </li>
                   </ul>
